@@ -46,8 +46,6 @@ More info below in ECR section
 ![alt_text](../static/img/webscraper1.png "image_tooltip")
 
 
-
-
 * create repository
     * Just follow default options
 * View push commands
