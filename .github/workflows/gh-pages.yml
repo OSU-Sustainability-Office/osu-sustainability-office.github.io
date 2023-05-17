@@ -1,32 +1,30 @@
-name: gh-pages
-
+name: gh pages
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build-deploy-gh-pages:
+    name: Build / Deploy to gh-pages
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set-up Node
+        uses: actions/setup-node@v1
         with:
           node-version: 16
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: yarn install
+        run: |
+          yarn install
+      - name: yarn build
+        run: |
+          yarn build
+      - name: deploy frontend to gh pages
+        uses: crazy-max/ghaction-github-pages@v3     # https://github.com/crazy-max/ghaction-github-pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
-          publish_branch: gh-pages
+          target_branch: gh-pages
+          build_dir: website/build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
