@@ -1,0 +1,4 @@
+/docusaurus-search-local/dist
+/website
+.yarn
+.pnp.*
