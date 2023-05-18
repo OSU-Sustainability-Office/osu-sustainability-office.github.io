@@ -1,12 +1,16 @@
 name: gh pages
+
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build-deploy-gh-pages:
-    name: Build / Deploy to gh-pages
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,16 +19,48 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: yarn install
-        run: |
-          yarn install
-      - name: yarn build
-        run: |
-          yarn build
-      - name: deploy frontend to gh pages
-        uses: crazy-max/ghaction-github-pages@v3     # https://github.com/crazy-max/ghaction-github-pages
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+
+  deploy-gh-pages:
+    name: Deploy to gh-pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set-up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Deploy to gh-pages
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
+          build_dir: website/build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  preview-deployment:
+    name: Preview Deployment
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Set-up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Deploy to preview
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: pr-${{ github.event.pull_request.number }}
           build_dir: website/build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
