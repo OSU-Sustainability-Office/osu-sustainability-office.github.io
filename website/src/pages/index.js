@@ -9,8 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: <a href="/docs/index">Check our guides here!</a>,
-    imageUrl:
-      'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/osu_so.png?raw=true',
+    imageUrl: 'img/osu_so.png',
   },
 ];
 
