@@ -10,7 +10,7 @@ const features = [
   {
     title: <a href="/docs/index">Check our guides here!</a>,
     imageUrl:
-      'https://assets2.rockpapershotgun.com/hitmandubaiheader.jpg/BROK/resize/1920x1080%3E/format/jpg/quality/80/hitmandubaiheader.jpg',
+      '../static/img/osu_so.png',
   },
 ];
 

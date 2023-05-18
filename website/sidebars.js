@@ -13,22 +13,21 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  "Docusaurus": [
+  Docusaurus: [
     {
-      "type": "category",
-      "label": "Specific Documentation",
-      "link": {
-        "type": "generated-index",
-        "slug": "index"
+      type: 'category',
+      label: 'Specific Documentation',
+      link: {
+        type: 'generated-index',
+        slug: 'index',
       },
-      "items": ["webscraper_tutorial"]
+      items: ['webscraper_tutorial'],
     },
     {
-      "type": "doc",
-      "id": "pre_reqs"
-    }
-  ]
-
+      type: 'doc',
+      id: 'pre_reqs',
+    },
+  ],
 };
 
 module.exports = sidebars;

@@ -6,7 +6,7 @@ module.exports = {
   url: 'https://osu-sustainability-office.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/osu_so.png',
   organizationName: 'osu-sustainability-office', // Usually your GitHub org/user name.
   projectName: 'OSU-SO-Documentation', // Usually your repo name.
   i18n: {
@@ -14,12 +14,12 @@ module.exports = {
     locales: ['en', ...(buildType === 'i18n' ? ['zh-CN', 'zh-TW'] : [])],
   },
   themeConfig: {
-    image: 'img/favicon.ico',
+    image: 'img/osu_so.png',
     navbar: {
       title: 'OSU SO Wiki',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/favicon2.png',
+        src: 'img/osu_so.png',
       },
       items: [
         {
