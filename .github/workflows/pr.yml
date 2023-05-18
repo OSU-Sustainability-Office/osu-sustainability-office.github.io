@@ -1,4 +1,5 @@
 name: gh pages
+
 on:
   pull_request:
     branches:
@@ -6,7 +7,7 @@ on:
 
 jobs:
   build-deploy-gh-pages:
-    name: Build / Deploy to gh-pages
+    name: Build / Deploy to gh-pages and Preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,8 +24,8 @@ jobs:
       - name: yarn build
         run: |
           yarn build
-      - name: deploy frontend to gh pages
-        uses: crazy-max/ghaction-github-pages@v3     # https://github.com/crazy-max/ghaction-github-pages
+      - name: Deploy to gh-pages
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: pr-${{ github.event.pull_request.number }}
           build_dir: website/build
