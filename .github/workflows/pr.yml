@@ -24,18 +24,13 @@ jobs:
       - name: yarn build
         run: |
           yarn build
+      - name: Move to Preview Directory
+        run: |
+          mv website/build website/preview
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_branch: gh-pages
-          publish_dir: website/build
-          allow_empty_commit: true
-      - name: Set PR Number
-        id: pr_number
-        run: echo "::set-output name=pr_number::${{ github.event.pull_request.number }}"
-      - name: Generate Preview URL
-        id: preview_url
-        run: echo "::set-output name=url::https://${{ github.actor }}.github.io/${{ github.repository }}/${{ steps.pr_number.outputs.pr_number }}"
-      - name: Display Preview URL
-        run: echo "Preview URL: ${{ steps.preview_url.outputs.url }}"
+          target_branch: gh-pages
+          build_dir: website/preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
