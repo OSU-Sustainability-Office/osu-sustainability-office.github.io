@@ -41,7 +41,7 @@ description: Software you should install before starting development
   - For VSCode install appropriate extensions for Vue, Javascript, etc
 - Vue Browser Debug Tools: [https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
   - Allows you to debug vue store in browser, e.g. `vue.$store.getters["map/building_1/description"]`
-  - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062557315640873030/image.png?width=1440&height=606)
+  - ![Screenshot](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/mysql_workbench_plus.PNG?raw=true)
 - MySQL Workbench (for debugging database. Probably won’t need this right now tbh but good to set up.)
   - Installation: [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
   - New Connection (Click Plus Sign): ![Screenshot](../static/img/mysql_workbench_plus.png)
