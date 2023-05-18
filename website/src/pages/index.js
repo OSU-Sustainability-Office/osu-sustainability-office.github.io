@@ -10,7 +10,7 @@ const features = [
   {
     title: <a href="/docs/index">Check our guides here!</a>,
     imageUrl:
-      '../static/img/osu_so.png',
+      'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/osu_so.png?raw=true',
   },
 ];
 
