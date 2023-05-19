@@ -1,9 +1,11 @@
 ---
-title: Software Installation Pre-Reqs
-description: Software you should install before starting development
+title: Backend Pre-Reqs
+description: Backend / proprietary software that must be installed in advance
 ---
 
-### Sam Getting Development Environments Setup
+# Backend Pre-Reqs
+
+## Sam Getting Development Environments Setup
 
 - Docker & Docker Compose (for local backend testing):
   - [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
@@ -11,12 +13,12 @@ description: Software you should install before starting development
 - NPM: [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
   - You probably have this but just in case.
 - Node Version Manager (nvm):
-  - This isn’t required but I highly recommend it (very annoying to switch nodeJS versions otherwise).
+  - This isn’t required but I highly recommend it (very annoying to switch NodeJS versions otherwise).
   - **This one is for Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
   - **Use this one for Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
     - Make sure to uninstall existing Node installation just in case: [https://github.com/coreybutler/nvm-windows#installation--upgrades](https://github.com/coreybutler/nvm-windows#installation--upgrades)
     - Read instructions in the repo README for general tips on installing specific node versions.
-  - Use Node 16 for Energy-Dashboard( `nvm use 16 `), and Node 12 ( `nvm use 12`) for most other stuff.
+  - Use Node 16 ( `nvm use 16 `)
 - AWS Stuff - **Do each step below in order. AWS CLI, SAM CLI can be installed but can’t set up credentials until OSU IT sets up your account.**
   - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
     - The above login site may require OSU IT to set you up - Milan has sent email.
@@ -54,7 +56,7 @@ description: Software you should install before starting development
     - Click the lightning symbol to run query.
     - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062556054711439451/image.png)
 
-### General Documentation
+## General Documentation
 
 - AWS SAM: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
 - Vue2: [https://v2.vuejs.org/](https://v2.vuejs.org/)
@@ -64,7 +66,7 @@ description: Software you should install before starting development
 - Github Actions (CI / devops): [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
 - Other backend stuff (skip to page 8 or so. I don’t understand this that well so just read original doc): [https://docs.google.com/document/d/195yG472A_xzk53GmmxTIP2i8sS-c8QN4v-5lk4XyaZ4/edit](https://docs.google.com/document/d/195yG472A_xzk53GmmxTIP2i8sS-c8QN4v-5lk4XyaZ4/edit)
 
-### Get Project Running Locally
+## Get Project Running Locally
 
 Start up the Docker Desktop (backend won’t work locally otherwise).
 
@@ -90,7 +92,7 @@ Frontend is locally hosted at [http://localhost:8080](http://localhost:8080)
 
 NOTE: Need both backend and frontend running for it to work.
 
-### Current Issues
+## Current Issues
 
 Check shared google drive:
 
