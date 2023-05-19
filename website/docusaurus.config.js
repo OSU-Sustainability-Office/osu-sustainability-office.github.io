@@ -29,7 +29,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/solderq35/hitruns-wiki#contribution-guidelines',
+          href: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io#contribution-guidelines',
           label: 'Contribution Guidelines',
           position: 'right',
         },
