@@ -9,11 +9,23 @@
  Create as many sidebars as you want.
  */
 
-// @ts-check
+// @ts-nocheck
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   Docusaurus: [
+    {
+      type: 'doc',
+      id: 'getting_started',
+    },
+    {
+      type: 'doc',
+      id: 'frontend_prereqs',
+    },
+    {
+      type: 'doc',
+      id: 'backend_prereqs',
+    },
     {
       type: 'category',
       label: 'Specific Documentation',
@@ -22,11 +34,7 @@ const sidebars = {
         slug: 'index',
       },
       items: ['webscraper_tutorial'],
-    },
-    {
-      type: 'doc',
-      id: 'pre_reqs',
-    },
+    }
   ],
 };
 

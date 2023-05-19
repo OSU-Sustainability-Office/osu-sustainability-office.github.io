@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <a href="/docs/index">Check our guides here!</a>,
+    title: <a href="/docs/getting_started">Get Started Here!</a>,
     imageUrl: 'img/osu_so.png',
   },
 ];

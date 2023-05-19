@@ -23,9 +23,9 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/index',
+          to: 'docs/getting_started',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Documentation',
           position: 'left',
         },
         {
