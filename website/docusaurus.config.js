@@ -62,7 +62,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/solderq35/hitruns-wiki',
+              href: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io',
             },
           ],
         },
@@ -79,12 +79,12 @@ module.exports = {
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/solderq35/hitruns-wiki/edit/master/website/',
+          editUrl: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/solderq35/hitruns-wiki/edit/master/website/',
+          editUrl: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
