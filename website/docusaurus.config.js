@@ -79,12 +79,14 @@ module.exports = {
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/main/website/',
+          editUrl:
+            'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/main/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/main/website/',
+          editUrl:
+            'https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/edit/main/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

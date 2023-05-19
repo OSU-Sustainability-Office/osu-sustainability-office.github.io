@@ -34,7 +34,7 @@ const sidebars = {
         slug: 'index',
       },
       items: ['webscraper_tutorial'],
-    }
+    },
   ],
 };
 
