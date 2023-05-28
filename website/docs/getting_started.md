@@ -5,6 +5,14 @@ description: General Advice / Introduction to OSU SO Software
 
 # Getting Started
 
+## General Info
+
+The following links are just for general info on OSU Sustainability Office and are not developer documentation.
+
+- [OSU Sustainability Home Page](https://fa.oregonstate.edu/sustainability)
+- [About the OSU Sustainability Office](https://fa.oregonstate.edu/sustainability/about/sustainability-office)
+  - Specific info about specific employees may be out of date at any given time, this page is not updated that frequently
+
 ## Active Projects
 
 Our Github Org: https://github.com/OSU-Sustainability-Office
