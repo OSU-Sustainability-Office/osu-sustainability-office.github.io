@@ -95,7 +95,7 @@ Name: /ecs/&lt;task name>
 
 Useful sandbox - [https://playcode.io/1457582](https://playcode.io/1457582)
 
-```
+```js
 const date = new Date('May 27, 2023 23:59:59 GMT+0');
 
 // Calculate the Unix time in seconds
