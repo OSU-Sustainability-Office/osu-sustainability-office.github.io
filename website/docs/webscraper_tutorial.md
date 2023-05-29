@@ -96,13 +96,12 @@ Name: /ecs/&lt;task name>
 Useful sandbox - [https://playcode.io/1457582](https://playcode.io/1457582)
 
 ```
-// Set the date and time in GMT+0 time zone
-const date = new Date('April 13, 2023 23:59:59 GMT+0');
+const date = new Date('May 27, 2023 23:59:59 GMT+0');
 
 // Calculate the Unix time in seconds
 const unixTimeSeconds = Math.round(date.getTime() / 1000);
 
-console.log(unixTimeSeconds); // Outputs: 1681343999
+console.log(unixTimeSeconds);
 ```
 
 **Testing Pipeline Guide**
