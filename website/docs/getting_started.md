@@ -28,6 +28,7 @@ Our Github Org: https://github.com/OSU-Sustainability-Office
 - Automated Jobs (CRON jobs etc) - [Github Repo](https://github.com/OSU-Sustainability-Office/automated-jobs)
 
   - Deployed as CRON job on AWS
+  - Technically this is more like backend (NodeJS), but this can still be developed locally for Open Source Contributors, assuming you use our [production API](https://api.sustainability.oregonstate.edu/v2/energy)
 
 - Lambda Common Layer (Security Infrastructure) - [Github Repo](https://github.com/OSU-Sustainability-Office/lambda-common-layer)
 
@@ -37,7 +38,7 @@ Our Github Org: https://github.com/OSU-Sustainability-Office
 
   - Frontend Only
 
-- Sustainability Kiosks - [Github Repo](https://github.com/OSU-Sustainability-Office/sustainability-kiosks), [Deployed Site](https://github.com/OSU-Sustainability-Office/sustainability-kiosks)
+- Sustainability Kiosks - [Github Repo](https://github.com/OSU-Sustainability-Office/sustainability-kiosks), [Deployed Site](https://osu-sustainability-office.github.io/sustainability-kiosks/#/)
 
   - Frontend Only
 
