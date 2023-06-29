@@ -3,37 +3,28 @@ title: Webscraper Tutorial
 description: Guide on adding webscrapers to Energy Dashboard
 ---
 
+# Webscraper Tutorial
+
+## General Info
+
 [https://github.com/OSU-Sustainability-Office/automated-jobs](https://github.com/OSU-Sustainability-Office/automated-jobs)
 
 [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
 
 [https://pptr.dev/](https://pptr.dev/)
 
-**Local Testing**
-
-- Need Docker, Energy dashboard backend running
-- npm install & npm i puppeteer
-- .env needs “DASHBOARD_API = http://localhost:3000”
-- Test if “node &lt;JS file>” works in automated jobs repo (or wherever you put scraper code)
-- Make sure you get 200 response
-- .env file in discord
-- Double check: Run energy dashboard frontend as well. Go to local dev version of energy dashboard, then either “OSU Operations”, “OSU Operations Lube Shop”, “SEC Solar”, e.g. [http://localhost:8080/#/building/43/2](http://localhost:8080/#/building/43/2)
-  - Inspect Element > Network > see the network request sent starting with “data…”
-- Maybe talk about mysql workbench
-  - Select \* from Solar_Meters
-
-**Local Testing (Docker)**
-
-More info below in ECR section
+## Automated-Jobs Dev Setup
 
 - [Go here for the .env file](https://drive.google.com/file/d/12dCdA5E5e6qPgkSYehqOcX_zVy9YztFF/view?usp=sharing) - put inside the `automated-jobs/SEC` directory
   - Need to be a paid OSU Sustainability Office Employee to see this above link
-- .env needs `DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy`
-- Get backend of energy-dashboard pushed to production first
-- `docker build -t <image name> .`
-- `docker run -t <image name>`
+- .env needs `DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy` unless you are making changes to energy dashboard (more on this in Testing Pipeline section)
 
-<strong>AWS ECR (Elastic Container Registry)</strong>
+In general, from the directory of any given tool (`SEC`, `check-acq`, etc. Note that `SunnyWebBox` and `Tesla Solar City` are deprecated and no longer used)
+- `npm i`
+- `node <Javascript file name>`, e.g. `node readsec.js`
+  - Need NodeJS v16
+
+## AWS ECR (Elastic Container Registry)
 
 [https://us-west-2.console.aws.amazon.com/ecr/repositories?region=us-west-2](https://us-west-2.console.aws.amazon.com/ecr/repositories?region=us-west-2)
 
@@ -50,9 +41,9 @@ More info below in ECR section
     - Install-AWSToolsModule AWS.Tools.ECR
   - Or, use WSL
 
-**AWS ECS (Elastic Container Service)**
+## AWS ECS (Elastic Container Service)
 
-**Task Definition**
+### Task Definition
 
 ![alt_text](../static/img/webscraper2.png 'image_tooltip')
 
@@ -64,7 +55,7 @@ More info below in ECR section
 
 - Note Name and Image URI especially, rest can be like existing version
 
-**Clusters**
+### Clusters
 
 [https://us-west-2.console.aws.amazon.com/ecs/v2/clusters?region=us-west-2](https://us-west-2.console.aws.amazon.com/ecs/v2/clusters?region=us-west-2)
 
@@ -79,7 +70,7 @@ More info below in ECR section
 - Click update on an existing scheduled task for reference before making a new one (have them side by side on different tabs!)
   - ![alt_text](../static/img/webscraper6.png 'image_tooltip')
 
-**AWS Cloudwatch**
+## AWS Cloudwatch
 
 [https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups)
 
@@ -91,7 +82,7 @@ Name: /ecs/&lt;task name>
 
 (I think)
 
-**Debug Database (Remove Redundant Data, check Unix Timestamp)**
+## Debug Database (Remove Redundant Data, check Unix Timestamp)
 
 Useful sandbox - [https://playcode.io/1457582](https://playcode.io/1457582)
 
@@ -104,7 +95,7 @@ const unixTimeSeconds = Math.round(date.getTime() / 1000);
 console.log(unixTimeSeconds);
 ```
 
-**Testing Pipeline Guide**
+## Testing Pipeline Guide
 
 - Local test with energy dashboard (both frontend and backend local), MySQL workbench
   - Move on when you have successfully added new data to SQL database with “node &lt;scraperJS file>”, and you get the right data from local frontend > inspect element > network tab
@@ -121,6 +112,7 @@ console.log(unixTimeSeconds);
     - `API_PWD` in automated-jobs env file = `AQUISUITE_PWD` value that the energy-dashboard backend expects as part of the payload
     - Again, should push backend energy-dashboard changes to production if you need to test upload with puppeteer
 - AWS ECR and ECS
+    - Inspect Element > Network > see the network request sent starting with “data…”
   - Change interval to 1 minute or something to test (ECS > cluster > scheduled task > update):
 
 ![alt_text](../static/img/webscraper7.png 'image_tooltip')

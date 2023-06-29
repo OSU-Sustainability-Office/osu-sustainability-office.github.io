@@ -25,7 +25,13 @@ module.exports = {
         {
           to: 'docs/getting_started',
           activeBasePath: 'docs',
-          label: 'Documentation',
+          label: 'Getting Started',
+          position: 'left',
+        },
+        {
+          to: 'docs/index',
+          activeBasePath: 'docs',
+          label: 'Documentation Index',
           position: 'left',
         },
         {
@@ -42,7 +48,7 @@ module.exports = {
           title: 'Guides',
           items: [
             {
-              label: 'Documentation',
+              label: 'Documentation Index',
               to: 'docs/index',
             },
           ],

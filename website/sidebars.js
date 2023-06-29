@@ -33,7 +33,7 @@ const sidebars = {
         type: 'generated-index',
         slug: 'index',
       },
-      items: ['webscraper_tutorial', 'kiosks'],
+      items: ['webscraper_tutorial', 'kiosks', 'cloudwatch'],
     },
   ],
 };
