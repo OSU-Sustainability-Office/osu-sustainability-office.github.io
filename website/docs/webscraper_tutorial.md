@@ -30,7 +30,7 @@ More info below in ECR section
   - Need to be a paid OSU Sustainability Office Employee to see this above link
 - .env needs `DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy`
 - Get backend of energy-dashboard pushed to production first
-- `docker build . -t <image name>`
+- `docker build -t <image name> .`
 - `docker run -t <image name>`
 
 <strong>AWS ECR (Elastic Container Registry)</strong>
@@ -106,20 +106,20 @@ console.log(unixTimeSeconds);
 
 **Testing Pipeline Guide**
 
-Yellow = local test. Node &lt;js file> probably enough.
-
 - Local test with energy dashboard (both frontend and backend local), MySQL workbench
   - Move on when you have successfully added new data to SQL database with “node &lt;scraperJS file>”, and you get the right data from local frontend > inspect element > network tab
-- Push energy dashboard backend code to production -EDIT: not needed
+- Unless you are making changes to the energy dashboard backend code, then just edit the `DASHBOARD_API` value in your `automated-jobs/SEC/.env` file to the production URL (https://api.sustainability.oregonstate.edu/v2/energy)
   - docker build -t test .
-  - docker run -p 3000:3000 test
+  - docker run -p test
 - Local test with webscraper on Docker
-  - Move on when “docker build . -t &lt;image name> and “docker run -t &lt;image name>” works and successfully adds data to SQL database
-- Energy Dashboard API -
-  - Run this in localhost:3000 if making changes to energy dashboard backend code
+  - Move on when “docker build -t test . &lt;image name> and “docker run -t &lt;image name>” works and successfully adds data to SQL database
+- If making changes to backend energy dashboard code:
+  - Run energy dashboard backend on http://localhost:3000
+  - Edit the `DASHBOARD_API` value in your `automated-jobs/SEC/.env` file to the local dev URL (http://localhost:3000)
   - [https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/dependencies/nodejs/models/meter.js#L141](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/dependencies/nodejs/models/meter.js#L141)
   - [https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/app/meter.js#L88](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/app/meter.js#L88)
-    - API_PWD in automated-jobs env file = AQUISUITE_PWD in common layer? Env file
+    - `API_PWD` in automated-jobs env file = `AQUISUITE_PWD` value that the energy-dashboard backend expects as part of the payload
+    - Again, should push backend energy-dashboard changes to production if you need to test upload with puppeteer
 - AWS ECR and ECS
   - Change interval to 1 minute or something to test (ECS > cluster > scheduled task > update):
 
@@ -128,3 +128,4 @@ Yellow = local test. Node &lt;js file> probably enough.
 - Double check this part via Cloudwatch, and also check SQL database
 - Remember to delete duplicate data from SQL database
   - “Delete from Solar_Meters where id &lt; someamount”
+  - Although redundant data _is_ [handled on the frontend](https://github.com/OSU-Sustainability-Office/energy-dashboard/pull/220/files#diff-6586f246008ae5ee333b803001847a4b4a69e2bbad28ff73b547375126b99a6bR80), it's good practice
