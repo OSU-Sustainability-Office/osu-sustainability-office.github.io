@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[589],{4509:function(e){e.exports=JSON.parse('{"title":"Specific Documentation","slug":"index","permalink":"/docs/index","navigation":{"previous":{"title":"Backend Pre-Reqs","permalink":"/docs/backend_prereqs"},"next":{"title":"Webscraper Tutorial","permalink":"/docs/webscraper_tutorial"}}}')}}]);
