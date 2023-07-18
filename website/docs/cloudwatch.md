@@ -5,6 +5,10 @@ description: AWS Cloudwatch logs and alerts (including AWS SNS email alerts)
 
 ## Cloudwatch
 
+:::info
+**Recurring Task**: You may get occasional emails about a "TimeoutError" after following the steps below, which indicates that a Solar Meter has failed to upload. In that case, see [this page](./webscraper_tutorial#sql-debugging--upload-missing-data) for what to do in case you get a "TimeoutError" email.
+:::
+
 - Important on left sidebar of AWS Cloudwatch:
   - Logs > Log groups
   - Alarms > All alarms
