@@ -33,7 +33,15 @@ const sidebars = {
         type: 'generated-index',
         slug: 'index',
       },
-      items: ['webscraper_tutorial', 'cloudwatch', 'kiosks', 'openssl', 'lambda-common-layer'],
+      items: [
+        'webscraper_tutorial',
+        'cloudwatch',
+        'kiosks',
+        'openssl',
+        'lambda-common-layer',
+        `energy-dashboard-graphs`,
+        `carbon-calculator`,
+      ],
     },
   ],
 };
