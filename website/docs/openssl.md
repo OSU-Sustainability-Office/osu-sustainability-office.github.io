@@ -1,4 +1,7 @@
-# OpenSSL
+---
+title: OpenSSL
+description: SSL certificate explainer / how to renew certificate
+---
 
 :::info
 **Recurring Task**: The OpenSSL certificates must be renewed every 2 years, as noted below.

@@ -28,20 +28,23 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Specific Documentation',
+      label: 'More Specific Documentation',
       link: {
         type: 'generated-index',
         slug: 'index',
       },
-      items: [
-        'webscraper_tutorial',
-        'cloudwatch',
-        'kiosks',
-        'openssl',
-        'lambda-common-layer',
-        `energy-dashboard-graphs`,
-        `carbon-calculator`,
-      ],
+
+      items: ['webscraper_tutorial', 'kiosks', `lambda-common-layer`, `carbon-calculator`, `energy-dashboard-graphs`],
+    },
+    {
+      type: 'category',
+      label: 'Recurring Tasks',
+      link: {
+        type: 'generated-index',
+        slug: 'index',
+      },
+
+      items: ['cloudwatch', 'openssl', `adding_meters_buildings`, `kilowatt_crackdown`, `git`],
     },
   ],
 };

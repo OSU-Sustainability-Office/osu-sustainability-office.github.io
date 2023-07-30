@@ -34,7 +34,8 @@ In general, from the directory of any given tool (`SEC`, `check-acq`, etc. Note 
 - create repository
   - Just follow default options
 - View push commands
-  - Start in “automated jobs/SEC” directory
+  - Start in `automated jobs/<scraper name>` directory, e.g. `automated-jobs/SEC`
+    - Currently, only `/SEC` and `check-acq` are currently active, being the solar webscrapers and meter outage detector respectively
   - Need AWS CLI installed (you should already have this)
   - Have docker desktop running in background
   - Windows Powershell Admin
@@ -81,66 +82,13 @@ In general, from the directory of any given tool (`SEC`, `check-acq`, etc. Note 
 
 The log group may be created automatically, if not, create it. May error otherwise. This is also where you can check if the task is executed.
 
-Name: /ecs/&lt;task name>
+Name: `/ecs/<task name>`
 
 See [this page on Cloudwatch](./cloudwatch.md) as well for more information
 
 [https://us-west-2.console.aws.amazon.com/ecs/v2/task-definitions?region=us-west-2](https://us-west-2.console.aws.amazon.com/ecs/v2/task-definitions?region=us-west-2)
 
 (I think)
-
-## SQL Debugging / Upload Missing Data
-
-- If you get a missed meter upload notification (TimeoutError) email or otherwise notice some missing or incorrect data for the Solar Panel buildings ([SEC Solar](https://dashboard.sustainability.oregonstate.edu/#/building/30/2) and [OSU Operations](https://dashboard.sustainability.oregonstate.edu/#/building/42/2)), then insert the missing data via MySQL workbench
-
-  - Check the `.env` file in the automated-jobs repo to reference where to log in for solar panel data. Clicking on one of the building names on the Plants page after you log in will bring up a table with daily and monthly data, including historical data
-  - Most of the fields should be pretty self explanatory to insert into the Solar_Meters table in MySQL workbench, but for the time_seconds value, reference the playcode below for how to get the Unix timestamp
-  - See [this page](./cloudwatch.md) for more info on Cloudwatch
-
-- INSERT (for missing data) and UPDATE (for fixing incorrect data etc) will be the most useful here as far as SQL commands
-- Use basic precautions, make sure you have highlighted only the lines of SQL you want to run before running it (clicking the yellow lightning symbol in MySQL workbench)
-- By default, MySQL workbench will forbid you from inserting, updating, or deleting multiple data entries without specifying an index range, so this should help prevent careless errors, but still, be careful!
-  - We don't have a dev database, so any changes in MySQL workbench hit production right away, so to speak. It can also be a good idea to back up data (e.g. as an Excel table, or at least taking some screenshots of what the database looked like) before performing any operation that could affect a lot of data entries
-- It can be useful to sort by time_seconds (just click the column after running `SELECT * from Solar_Meters`) to keep track of the data entries in order, especially if you had to at some point retroactively insert missing data into the database
-
-### Unix Timestamps
-
-- Useful reference / converter: https://www.unixtimestamp.com/index.php
-  - We are using millisecond precision for the webscrapers, to keep in mind for the Unix timestamps, your time_seconds values should have 10 digits
-- Useful sandbox - [https://playcode.io/1457582](https://playcode.io/1457582)
-
-```js
-const date = new Date('May 27, 2023 23:59:59 GMT+0');
-
-// Calculate the Unix time in seconds
-const unixTimeSeconds = Math.round(date.getTime() / 1000);
-
-console.log(unixTimeSeconds);
-```
-
-### SQL Command Examples
-
-**These are example commands below, please substitute the correct values as needed!**
-
-Again, refer to the [Unix Timestamps section above](webscraper_tutorial#unix-timestamps) for `time_seconds` value.
-
-Rest should be pretty self-explanatory. Remember that the `energy_change` value of `OSU_Operations_Total` = "OSU Operations" + "OSU Operations Lube Shop" in the portal website linked in the `.env` file
-
-For inserting missing data:
-
-`select * from Solar_Meters;`
-
-`` INSERT INTO Solar_Meters (`time`, `time_seconds`, `energy_change`, `tableid`) VALUES ('2023-7-02T23:59:59', 1688342399, 233.74, 'SEC_Solar'); ``
-
-`` INSERT INTO Solar_Meters (`time`, `time_seconds`, `energy_change`, `tableid`) VALUES ('2023-7-02T23:59:59', 1688342399, 2424.89, 'OSU_Operations_Total'); ``
-
-If you just need to update a value (example):
-
-```
-UPDATE Solar_Meters
-SET time = '2023-7-2T23:59:59'
-WHERE id IN (737, 738);
-```
 
 ## Testing Pipeline Guide
 

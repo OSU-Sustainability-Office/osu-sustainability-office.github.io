@@ -1,3 +1,8 @@
+---
+title: Energy Dashboard Graph Logic
+description: Overview of how graph logic (frontend)
+---
+
 # Energy Dashboard Graph Logic
 
 ## Relevant PR's:
