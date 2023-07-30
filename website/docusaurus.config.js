@@ -29,9 +29,15 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/index',
+          to: 'docs/specific',
           activeBasePath: 'docs',
-          label: 'Documentation Index',
+          label: 'More Specific Documentation',
+          position: 'left',
+        },
+        {
+          to: 'docs/tasks',
+          activeBasePath: 'docs',
+          label: 'Recurring Tasks',
           position: 'left',
         },
         {
@@ -48,8 +54,16 @@ module.exports = {
           title: 'Guides',
           items: [
             {
-              label: 'Documentation Index',
-              to: 'docs/index',
+              label: 'Getting Started',
+              to: 'docs/getting_started',
+            },
+            {
+              label: 'More Specific Documentation',
+              to: 'docs/specific',
+            },
+            {
+              label: 'Recurring Tasks',
+              to: 'docs/tasks',
             },
           ],
         },

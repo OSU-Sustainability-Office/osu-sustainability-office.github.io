@@ -31,7 +31,7 @@ const sidebars = {
       label: 'More Specific Documentation',
       link: {
         type: 'generated-index',
-        slug: 'index',
+        slug: 'specific',
       },
 
       items: ['webscraper_tutorial', 'kiosks', `lambda-common-layer`, `carbon-calculator`, `energy-dashboard-graphs`],
@@ -41,7 +41,7 @@ const sidebars = {
       label: 'Recurring Tasks',
       link: {
         type: 'generated-index',
-        slug: 'index',
+        slug: 'tasks',
       },
 
       items: ['cloudwatch', 'openssl', `adding_meters_buildings`, `kilowatt_crackdown`, `git`],
