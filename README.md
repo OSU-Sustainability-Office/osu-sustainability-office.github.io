@@ -24,18 +24,19 @@ OSU Sustainability Wiki has the advantage of a search bar feature (frontend only
 
 ### Dependencies
 
-You will need either node version `16.15.1` or older, OR yarn version of `3.2.2` or newer. I recommend updating yarn so you can use newer node versions.
+NodeJS
 
-How to update yarn:
+- NodeJS version 18 (`nvm use 18`)
+
+Yarn:
 
 - `npm install --global yarn`
-- `yarn set version 3.22`
 
 How to change Node version:
 
 - See https://github.com/coreybutler/nvm-windows or https://github.com/nvm-sh/nvm
-- `nvm install 16.15.1` (or whichever version you want)
-- `nvm use 16.15.1`
+- `nvm install 18` (or whichever version you want)
+- `nvm use 18`
 
 ### Installation
 
