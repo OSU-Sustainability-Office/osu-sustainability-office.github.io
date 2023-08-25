@@ -4,7 +4,9 @@ description: SSL certificate explainer / how to renew certificate
 ---
 
 :::info
-**Recurring Task**: The OpenSSL certificates must be renewed every 2 years, as noted below.
+
+- **Recurring Task**: The OpenSSL certificates must be renewed every 2 years, as noted below
+- **Frequency**: Once every 2 years
 :::
 
 HTTPS is enabled for our API using SSL certificates obtained via the [InCommon SSL Certificate Request Form](https://is.oregonstate.edu/webform/incommon-ssl-certificate-request-preferred-ssl-option). This will need to be done periodically as our SSL certificates expire 2 years after they are issued.

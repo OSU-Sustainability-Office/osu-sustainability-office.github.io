@@ -3,6 +3,13 @@ title: Git
 description: Overview of Git / Github Actions / Testing Protocol
 ---
 
+:::info
+
+- **Recurring Task**: You have to follow Git protocol every time you make commits or push code
+- **Frequency**: Every time you make commits or push code
+
+:::
+
 ## Github Actions
 
 - See `.github/workflows` folder in existing repos for examples

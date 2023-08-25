@@ -4,7 +4,10 @@ description: Overview of Cloudwatch and SNS Email Alerts
 ---
 
 :::info
-**Recurring Task**: You may get occasional emails about a "TimeoutError" after following the steps below, which indicates that a Solar Meter has failed to upload. In that case, see [below](./cloudwatch#sql-debugging--upload-missing-data) for what to do in case you get a "TimeoutError" email.
+
+- **Recurring Task**: You may get occasional emails about a "TimeoutError" after following the steps below, which indicates that a Solar Meter has failed to upload
+  - In that case, see [below](./cloudwatch#sql-debugging--upload-missing-data) for what to do in case you get a "TimeoutError" email
+- **Frequency**: Not sure, the scraper seems pretty reliable now with latest updates. Previously, once every 2 weeks ish
 :::
 
 - Important on left sidebar of AWS Cloudwatch:

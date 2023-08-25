@@ -6,7 +6,8 @@ description: Checklist of tasks needed for adding new meters / buildings
 # Adding Meters / Buildings
 
 :::info
-**Recurring Task**: You may be asked to add new meters or buildings to the dashboard every now and then
+- **Recurring Task**: You may be asked to add new meters or buildings to the dashboard every now and then
+- **Frequency**: Once or twice a year
 :::
 
 ## Overview

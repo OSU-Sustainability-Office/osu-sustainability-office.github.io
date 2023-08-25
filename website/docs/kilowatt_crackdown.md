@@ -3,6 +3,13 @@ title: Kilowatt Crackdown
 description: Overview of tasks to do for Kilowatt Crackdown
 ---
 
+:::info
+
+- **Recurring Task**: You have to create a kilowatt campaign (with coordination from Lety as noted below), debug any errors that may appear
+- **Frequency**: Once a year
+
+:::
+
 ## Overview
 
 - Add item to `campaigns` table as per notice from Lety on what residential buildings will particpate in Kilowatt Crackdown this year. Pay attention to:
