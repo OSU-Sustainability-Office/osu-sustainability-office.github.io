@@ -43,7 +43,7 @@ How to change Node version:
 - `yarn install` to install required node modules.
 - `yarn start` to open the dev environment to preview the website.
 - `yarn build` to build the website locally (needed if you want to test the search function before deployment).
-- Deployment is handled by the files in `github/workflows`
+- Deployment is handled by the files in `.github/workflows`
 - `yarn format` for code formatting
 
 ## Contribution Guidelines
