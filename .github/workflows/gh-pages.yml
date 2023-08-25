@@ -19,6 +19,8 @@ jobs:
         run: |
           yarn install
       - name: yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
         run: |
           yarn build
       - name: deploy frontend to gh pages
