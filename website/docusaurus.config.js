@@ -29,6 +29,12 @@ module.exports = {
           position: 'left',
         },
         {
+          to: 'docs/faq',
+          activeBasePath: 'docs',
+          label: 'FAQ / HELP ME',
+          position: 'left',
+        },
+        {
           to: 'docs/specific',
           activeBasePath: 'docs',
           label: 'More Specific Documentation',
@@ -56,6 +62,10 @@ module.exports = {
             {
               label: 'Getting Started',
               to: 'docs/getting_started',
+            },
+            {
+              label: 'FAQ / HELP ME',
+              to: 'docs/faq',
             },
             {
               label: 'More Specific Documentation',

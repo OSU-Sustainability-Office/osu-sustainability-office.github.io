@@ -27,6 +27,10 @@ const sidebars = {
       id: 'backend_prereqs',
     },
     {
+      type: 'doc',
+      id: 'faq',
+    },
+    {
       type: 'category',
       label: 'More Specific Documentation',
       link: {

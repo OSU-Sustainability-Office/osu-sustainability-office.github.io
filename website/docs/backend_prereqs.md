@@ -5,20 +5,38 @@ description: Backend / proprietary software that must be installed in advance
 
 # Backend Pre-Reqs
 
-## Sam Getting Development Environments Setup
+## General Software Needed
+
+### Docker
 
 - Docker & Docker Compose (for local backend testing):
   - [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
   - Select “Docker Desktop for &lt;Your Platform>”
+
+### NPM
+
 - NPM: [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-  - You probably have this but just in case.
+  - You probably have this but just in case
+
+### Yarn
+
+We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to re-run this if you switch NodeJS versions with NVM as listed below.
+
+- `npm install --global yarn`
+- https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+
+### NVM / NodeJS
+
 - Node Version Manager (nvm):
   - This isn’t required but I highly recommend it (very annoying to switch NodeJS versions otherwise).
   - **This one is for Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
   - **Use this one for Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
     - Make sure to uninstall existing Node installation just in case: [https://github.com/coreybutler/nvm-windows#installation--upgrades](https://github.com/coreybutler/nvm-windows#installation--upgrades)
     - Read instructions in the repo README for general tips on installing specific node versions.
-  - Use Node 16 ( `nvm use 16 `)
+  - Use Node 18 ( `nvm use 18 `)
+
+### AWS
+
 - AWS Stuff - **Do each step below in order. AWS CLI, SAM CLI can be installed but can’t set up credentials until OSU IT sets up your account.**
   - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
     - The above login site may require OSU IT to set you up - Milan has sent email.
@@ -39,11 +57,17 @@ description: Backend / proprietary software that must be installed in advance
     - Fill in all details (refer to IAM section for Access Key ID and Secret Access Key). Make sure to select “us-west-2” for region. I think default output can be left as json.
   - AWS SAM CLI (CLI for serverless backend):
     - [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+
+### IDE
+
 - IDE: Use any you like, VSCode is a personal favorite of mine.
   - For VSCode install appropriate extensions for Vue, Javascript, etc
 - Vue Browser Debug Tools: [https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
   - Allows you to debug vue store in browser, e.g. `vue.$store.getters["map/building_1/description"]`
   - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062557315640873030/image.png?width=1440&height=606)
+
+### MySQL Workbench
+
 - MySQL Workbench (for debugging database. Probably won’t need this right now tbh but good to set up.)
   - Installation: [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
   - New Connection (Click Plus Sign): ![Screenshot](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/mysql_workbench_plus.PNG?raw=true)

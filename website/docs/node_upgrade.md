@@ -21,6 +21,12 @@ description: Periodic NodeJS UpDates Needed
   - This blog category can help keep track of changes to NodeJS versions supported by Github Actions (needed for frontend Github Pages, as well as all Github Actions CI/CD (e.g. for triggering backend deployments))
   - **Expect about a year's delay** between General NodeJS version EOL and Github Actions NodeJS EOL, as we can see that Github Actions [dropped support for NodeJS 12 about a year](https://github.blog/changelog/2023-05-04-github-actions-all-actions-will-run-on-node16-instead-of-node12/)
 
+### Checking Current NodeJS Versions
+
+- On the backend, look in `backend/template.yaml` (or something like that), this controls the NodeJS version used for the backend (AWS Lambda)
+  - Go to AWS Console > Lambda > Functions to double check which NodeJS versions are currently used in backend
+- On the frontend, look in the `.github/workflows` folder for configuring nodeJS version (every Github Actions YML file except the API-deploy workflow, as backend nodejs version is handled by `backend/template.yaml` as explained above)
+
 ### Version Specific Changes
 
 **What Breaks from NodeJS 12 to 16**
