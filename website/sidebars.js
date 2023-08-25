@@ -34,7 +34,7 @@ const sidebars = {
         slug: 'specific',
       },
 
-      items: ['webscraper_tutorial', 'kiosks', `lambda_common-layer`, `carbon_calculator`, `energy_dashboard_graphs`],
+      items: ['webscraper_tutorial', 'kiosks', `lambda_common_layer`, `carbon_calculator`, `energy_dashboard_graphs`],
     },
     {
       type: 'category',

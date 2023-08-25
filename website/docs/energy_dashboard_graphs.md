@@ -23,4 +23,4 @@ description: Overview of how graph logic (frontend)
   - Baseline data for kilowatt crackdown campaign
 - `src/store/chart_modifiers/line_bar/baseline_perc.js`
   - Covers baseline data for leaderboard / individual building graph
-- Refer to the [PR's section above](energy-dashboard-graphs#relevant-prs) for specific code lines for debugging and logs
+- Refer to the [PR's section above](energy_dashboard_graphs#relevant-prs) for specific code lines for debugging and logs
