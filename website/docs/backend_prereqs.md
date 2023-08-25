@@ -62,9 +62,6 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 
 - IDE: Use any you like, VSCode is a personal favorite of mine.
   - For VSCode install appropriate extensions for Vue, Javascript, etc
-- Vue Browser Debug Tools: [https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
-  - Allows you to debug vue store in browser, e.g. `vue.$store.getters["map/building_1/description"]`
-  - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062557315640873030/image.png?width=1440&height=606)
 
 ### MySQL Workbench
 

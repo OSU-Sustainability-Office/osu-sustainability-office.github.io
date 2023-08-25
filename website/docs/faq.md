@@ -15,8 +15,8 @@ If you haven't already, please read through and follow those instructions first 
 - `sam local start-api` for backend
   - As a general rule of thumb, you need to have Docker Desktop open in the background to run backend locally
 - [automated-jobs](https://github.com/OSU-Sustainability-Office/automated-jobs) will use syntax `node <filename.js>`
-- This wiki can be compiled with `npm start`
-- `npm run format` or `yarn prettier` (for wiki) are for auto-formatting code
+- This wiki can be compiled with `yarn start`
+- `npm run format` or `yarn format` (for wiki) are for auto-formatting code
 - For more specific info, see the `README.md` or `package.json` of the individual repos as seen [here](getting_started#active-projects)
   - Note that some projects host separate `package.json` for backend folders
 - See [frontend prereqs](frontend_prereqs) and [backend prereqs](backend_prereqs) docs also; they are written mostly for energy-dashboard but should apply to most other Vue applications we use
