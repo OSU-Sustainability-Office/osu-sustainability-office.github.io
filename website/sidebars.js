@@ -34,7 +34,7 @@ const sidebars = {
         slug: 'specific',
       },
 
-      items: ['webscraper_tutorial', 'kiosks', `lambda-common-layer`, `carbon-calculator`, `energy-dashboard-graphs`],
+      items: ['webscraper_tutorial', 'kiosks', `lambda_common-layer`, `carbon_calculator`, `energy_dashboard_graphs`],
     },
     {
       type: 'category',
@@ -44,7 +44,7 @@ const sidebars = {
         slug: 'tasks',
       },
 
-      items: ['cloudwatch', 'openssl', `adding_meters_buildings`, `kilowatt_crackdown`, `git`],
+      items: ['cloudwatch', 'openssl', `adding_meters_buildings`, `kilowatt_crackdown`, `node_upgrade`, `git`],
     },
   ],
 };

@@ -52,3 +52,5 @@ How to change Node version:
 3. [Make a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 4. Go to [Docs folder](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/tree/main/website/docs) (`osu-sustainability-office.github.io/website/docs`) and make your edits. Edit `osu-sustainability-office.github.io/website/sidebars.js` as well if you added a new guide.
 5. [Make a Pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for your changes.
+
+- Useful browser extension if converting Google Docs content to Markdown: https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607
