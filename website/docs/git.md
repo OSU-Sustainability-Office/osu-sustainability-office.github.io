@@ -27,3 +27,7 @@ description: Overview of Git / Github Actions / Testing Protocol
   - On production, as there may be some issues only apparent on production version vs local
 - Always branch off of main / master branch if possible. Do not branch off of another feature branch if possible, to avoid merge issues later
 - Try to split tasks into smaller parts to make delegating tasks easier, and make it easier to track incremental progress
+<!---
+move the below bullet point to another dedicated frontend testing / devops doc maybe? idk. frontend prereqs doesn't feel like a good fit
+-->
+- Remember for testing the production frontend, the changes aren't deployed until the `gh-pages` branch (if using Github Pages) shows green deployment checkmark. Backend changes should deploy as soon as the pipeline shows green checkmark on the `master` / `main` branch
