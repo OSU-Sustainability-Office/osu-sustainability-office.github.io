@@ -7,7 +7,7 @@ description: Periodic NodeJS UpDates Needed
 
 - **Recurring Task**: NodeJS version needs to be updated periodically. You may have to resolve dependency conflicts in package.json (among other things) to ensure compatibility
 - **Frequency**: Depends on the release schedule of NodeJS, AWS Lambda, and Github Actions, as seen below. About once a year can be expected
-:::
+  :::
 
 ### AWS Lambda NodeJS Schedule
 

@@ -49,6 +49,7 @@
     "@docusaurus/theme-common": "2.0.0-beta.20"
   },
   "dependencies": {
-    "@easyops-cn/docusaurus-search-local": "workspace:^"
+    "@easyops-cn/docusaurus-search-local": "workspace:^",
+    "prettier": "2.7.1"
   }
 }
