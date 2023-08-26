@@ -7,7 +7,8 @@ description: Webscraper Tutorial Info that Pertains to Updating Webscraper
 
 - **Recurring Task**: Extra steps for deploying changes to webscraper detailed below
 - **Frequency**: Every time you need to update the webscraper
-  :::
+
+:::
 
 ## Updating Webscraper
 
