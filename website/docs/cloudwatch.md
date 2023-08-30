@@ -12,8 +12,8 @@ description: Overview of Cloudwatch and SNS Email Alerts
 :::
 
 - Important on left sidebar of AWS Cloudwatch:
-  - Logs > Log groups
-  - Alarms > All alarms
+  - Logs > Log groups > `/ecs/collect-check-acq` and `/ecs/collect-sec-data`
+  - Alarms > All alarms > `TimeoutError` and `3Or4DaysOutage`
 - The amount of time it takes for an alarm to go from "In alarm" to "Insufficient data" is defined by what you have set the "period" of the alarm as. In general, it takes 3 periods for the alarm state to reset
   - This is important because if you set the "period" too high, the alarm will never reset itself and will stay in the alarmed state permanently
   - Since the two jobs tracked by Cloudwatch (solar meter uploads vs regular meter uploads) are only run every 24 and 48 hours respectively, it is usually safe to leave the alarm period as 1 hour

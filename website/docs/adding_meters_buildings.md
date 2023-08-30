@@ -24,4 +24,9 @@ The following tables in the SQL database should be updated each time a new meter
   - Update building image by uploading image to `osu-energy-images` AWS S3 bucket (manual upload will be simplest)
   - Get map ID from https://www.openstreetmap.org/ ("way" on openstreetmap = map ID in database)
 - `meter_group_relation`
+
   - Match the corresponding meter group and meter ID together in. One meter group can be mapped to several meters, but not the other way around
+
+- Also need to update [validIDs file in automated-jobs](https://github.com/OSU-Sustainability-Office/automated-jobs/blob/main/check-acq/validIDs.json) to reflect the added buildings, meters, meter groups
+  - Needed to check if the newly added API endpoints are up at any given time. See [Cloudwatch](cloudwatch) for more info
+  - Might integrate this better in the database at some point
