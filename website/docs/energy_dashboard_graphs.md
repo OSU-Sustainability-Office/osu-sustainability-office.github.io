@@ -13,6 +13,7 @@ description: Overview of how graph logic (frontend)
 ## Relevant Files
 
 - Reference [this file](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/e663c82e3954f1660fc7aae9a0c92e69dd8944d1/src/store/chart.module.js#L187) for a list of which variables mean which energy types (like how `accumulated_real` corresponds to Electricity (Power))
+- Reference [this file](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/e663c82e3954f1660fc7aae9a0c92e69dd8944d1/backend/dependencies/nodejs/meter_classes.js) for information on meter classes as they are defined in the MySQL database (mapping meter class ID numbers to the meter class names)
 - `src/store/chart_modifiers/line_bar/avg_accumulated_real.js`
   - For electricity (`accumulated_real`)
   - Single graph pages of kilowatt crackdown campaign - current data
