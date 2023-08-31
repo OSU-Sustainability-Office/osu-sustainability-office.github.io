@@ -43,4 +43,5 @@ The following tables in the SQL database should be updated each time a new meter
 - Resize image for thumbnail with https://imageresizer.com/
   - Set width as **400px**, leave the height option blank to let the height scale with original proportions
   - Upload resized images to `thumbnails` directory of osu-energy-images
+- Click on uploaded image in `S3 bucket` > `Permissions` > `Everyone(public access)` > `Object` > change to `Read`
 - Go back and make sure the file name of the image you uploaded matches the image filename as listed in `buildings` table in the SQL database as seen in [MySQL Workbench](adding_meters_buildings#MySQL-Workbench)
