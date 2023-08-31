@@ -42,4 +42,9 @@ Important AWS Services for OSU SO (non-exhaustive)
   - [Solar data missed upload](cloudwatch)
   - [Creating new Kilowatt Campaign](kilowatt_crackdown)
   - Anything else touching the database
-- **WARNING**: Messing with the data in MySQL workbench **directly mutates the data** and I'm not sure about data backups. Use with care, although by default MySQL workbench should use "safe" settings, e.g. must specify primary key values for deleting values
+- **See [Database document](database) for more detailed info**
+
+## Credentials
+
+- [Credentials Folder](https://drive.google.com/drive/u/1/folders/1geuKCp-aTIrde2WdJkE3f_L2TsF46_O3)
+  - Need to be OSU SO employee to see this link
