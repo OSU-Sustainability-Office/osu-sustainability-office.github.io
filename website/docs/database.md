@@ -24,6 +24,7 @@ description: Deep Dive on MySQL Database
   - You don't have to specify the primary key (usually called `id`) for `INSERT INTO`, but it is good practice
   - You can use a range for the primary key like `WHERE ID < 5` if you have to mass delete / insert / update something, but **do so with caution**
 - We don't have a dev database, so any changes in MySQL workbench hit production right away, so to speak. It can also be a good idea to back up data (e.g. as an Excel table, or at least taking some screenshots of what the database looked like) before performing any operation that could affect a lot of data entries
+- If in doubt what a certain database column means or what the database column value should be, it may be a good idea to just copy the same value that previous entries used (e.g. I'm not sure why the `goal` value in `campaign_groups` is historically set to `100.048`, but just keep it the same for new entries)
 
 ## Relationships between Tables
 
