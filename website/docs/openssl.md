@@ -25,3 +25,10 @@ To resolve these issues, generate a new private key and CSR (certificate signing
 
 Command to generate CSR:
 `openssl req -new -newkey rsa:2048 -nodes -keyout sustainability.key -out sustainability.csr`
+
+## Helpful Resources
+
+- CSR decoder (double check, make sure you entered info correcctly): https://certlogik.com/decoder/
+- Guide for installing OpenSSL for Windows 10 / 11 : https://www.stechies.com/installing-openssl-windows-10-11/
+- Info on CSR, PEM formats: https://stackoverflow.com/a/56215545
+- General useful info on generating CSR: https://phoenixnap.com/kb/generate-openssl-certificate-signing-request
