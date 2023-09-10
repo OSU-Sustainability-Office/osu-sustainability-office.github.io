@@ -21,6 +21,10 @@ If you haven't already, please read through and follow those instructions first 
   - Note that some projects host separate `package.json` for backend folders
 - See [frontend prereqs](frontend_prereqs) and [backend prereqs](backend_prereqs) docs also; they are written mostly for energy-dashboard but should apply to most other Vue applications we use
 
+## Git
+
+- [See the Git doc](git)
+
 ## AWS
 
 - AWS Login Link: https://login.oregonstate.edu/apps/aws/
