@@ -20,6 +20,8 @@ The following tables in the SQL database should be updated each time a new meter
   - Should update itself for new meters; the primary key `id` will auto-increment so you can tell new meters were added
 - `meter_groups`
   - Make sure to update the `building_id_2` value in `meter_groups` table if you are adding a new building
+  - Each meter group is essentially defining a separate graph. If you have multiple energy types (e.g. the building has both electricity and gas), then make sure to define a separate meter group for each energy type
+    - Review [this page](energy_dashboard_graphs#relevant-files) if you forget how to tell which energy type is which
 - `buildings`
   - Update building image by uploading image to `osu-energy-images` AWS S3 bucket (manual upload will be simplest)
   - Get map ID from https://www.openstreetmap.org/ ("way" on openstreetmap = map ID in database)
