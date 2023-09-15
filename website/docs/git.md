@@ -104,7 +104,7 @@ Feel free to edit this doc / instructions as needed, this is a living document.
 - Please remove any debug comments (`console.log`) statements you added at this point and rename variables if any are confusingly named
 - Run `npm run format` if you haven't already, make sure you ran it in the last commit for the PR
 - Merge PR once you have reviewed the checklist items above, and have also conducted a general code review on any changed files, and made any last changes you would like to make
-  - Pick the "Squash and Merge" option when merging the PR, to prevent bloat in the main / master branch's commit history. You can see the individual commits on the PR anyways
+  - Pick the `Squash and Merge` option when merging the PR, to prevent bloat in the `main` / `master` branch's commit history. You can see the individual commits on the PR anyways
   <!---
   move the below bullet point to another dedicated frontend testing / devops doc maybe? idk. frontend prereqs doesn't feel like a good fit
   -->
