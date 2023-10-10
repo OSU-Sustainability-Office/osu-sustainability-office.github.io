@@ -31,12 +31,6 @@ The following tables in the SQL database should be updated each time a new meter
 
 - See [Database](database) document for help on updating / inserting buildings and meters
 
-## automated-jobs
-
-- Also need to update [validIDs file in automated-jobs](https://github.com/OSU-Sustainability-Office/automated-jobs/blob/main/check-acq/validIDs.json) to reflect the added buildings, meters, meter groups
-  - Needed to check if the newly added API endpoints are up at any given time. See [Cloudwatch](cloudwatch) for more info
-  - Might integrate this better in the database at some point
-
 ## AWS S3
 
 - Go to AWS Web Console > S3 > Buckets > osu-energy-images
