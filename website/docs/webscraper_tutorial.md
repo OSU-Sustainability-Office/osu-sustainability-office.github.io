@@ -105,7 +105,6 @@ See [this page on Cloudwatch](./cloudwatch.md) as well for more information
   - [https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/dependencies/nodejs/models/meter.js#L141](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/dependencies/nodejs/models/meter.js#L141)
   - [https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/app/meter.js#L88](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/app/meter.js#L88)
     - `API_PWD` in automated-jobs env file = `AQUISUITE_PWD` value that the energy-dashboard backend expects as part of the payload
-    - Again, should push backend energy-dashboard changes to production if you need to test upload with puppeteer
 - AWS ECR and ECS
   - Inspect Element > Network > see the network request sent starting with “data…”
   - **If you just want to make an update to the webscraper, you just need to push changes to ECR and not ECS. ECS should be configured to pick up the latest ECR revision anyways**
