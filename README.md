@@ -1,6 +1,6 @@
 # OSU Sustainability Wiki
 
-![Frontend Status](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/actions/workflows/gh-pages.yml/badge.svg) ![PR Status](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/actions/workflows/pr.yml/badge.svg)
+![Frontend Status](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/actions/workflows/gh-pages.yml/badge.svg) ![PR Status](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/actions/workflows/test-build-s3.yml/badge.svg)
 
 ## Site URL (Try it Yourself!)
 
