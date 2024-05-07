@@ -4,7 +4,8 @@
 
 ## Site URL (Try it Yourself!)
 
-**https://osu-sustainability-office.github.io/**
+- Production Deployment URL: https://osu-sustainability-office.github.io/
+- Test Deployment URL: http://osu-so-wiki.s3-website-us-west-2.amazonaws.com/
 
 ## About
 
