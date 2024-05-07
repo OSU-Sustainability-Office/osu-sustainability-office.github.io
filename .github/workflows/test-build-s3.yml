@@ -1,23 +1,26 @@
-name: PR Build
-
+name: S3 Test Build
 on:
   pull_request:
     branches:
       - main
 
 jobs:
-  build-deploy-gh-pages:
-    name: Build / Deploy to gh-pages and Preview
+  build-deploy-s3:
+    name: Build / Deploy to S3 Test Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
       - name: Set-up Node
         uses: actions/setup-node@v1
         with:
           node-version: 18
+      - name: AWS Creds
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
       - name: yarn install
         run: |
           yarn install
@@ -26,5 +29,6 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
         run: |
           yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: deploy frontend to s3
+        run: |
+          aws s3 sync ./website/build s3://osu-so-wiki
