@@ -75,7 +75,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
     - Limit to 50,000 rows to avoid it taking too long.
     - Run test query, e.g. `select * from data order by time DESC;`
     - Click the lightning symbol to run query.
-    - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062556054711439451/image.png)
+    - ![sql example](../static/img/sql_example.png)
 
 ## General Documentation
 
