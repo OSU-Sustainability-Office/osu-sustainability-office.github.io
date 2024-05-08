@@ -67,7 +67,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 
 - MySQL Workbench (for debugging database. Probably won’t need this right now tbh but good to set up.)
   - Installation: [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
-  - New Connection (Click Plus Sign): ![Screenshot](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/mysql_workbench_plus.PNG?raw=true)
+  - New Connection (Click Plus Sign): ![Screenshot](../static/img/mysql_workbench_plus.png)
   - [For MySQL credentials, see here](https://drive.google.com/file/d/1dY-t3bxLc3HRkjg2HDr6uyvcM3BIYKW0/view?usp=sharing)
     - Need to be paid employee of OSU Sustainability office to see above link
   - Once set up:
