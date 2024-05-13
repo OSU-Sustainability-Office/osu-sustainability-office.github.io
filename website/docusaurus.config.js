@@ -6,7 +6,7 @@ module.exports = {
   url: 'https://osu-sustainability-office.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon3.ico',
+  favicon: 'img/favicon.ico',
   organizationName: 'osu-sustainability-office', // Usually your GitHub org/user name.
   projectName: 'OSU-SO-Documentation', // Usually your repo name.
   i18n: {
@@ -19,7 +19,7 @@ module.exports = {
       title: 'OSU SO Wiki',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/favicon3.ico',
+        src: 'img/favicon.ico',
       },
       items: [
         {
