@@ -46,7 +46,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
     - Click “Add User” to begin
     - On Step 1, enter a name for your new IAM user with the format "myname-cli" (substituting your actual name for "myname"). Check the checkboxes for "Provide user access to the AWS Management Console" and then set up your IAM user's password
       - ![Screenshot of this step](../static/img/iam_step_1.png)
-    - On Step 2, select “Copy permissions” > copy from an existing user who's name ends with "-cli", e.g. "samantha-cli"
+    - On Step 2, select “Copy permissions” > copy from an existing user whose name ends with "-cli", e.g. "samantha-cli"
       - ![Screenshot of this step](../static/img/iam_step_2.png)
     - On Step 3, review and then click "Create User" button
     - On Step 4, view your password if you haven't already, and then click "Return to users list"
