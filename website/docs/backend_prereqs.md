@@ -38,7 +38,8 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 ### AWS
 
 - AWS Stuff - **Do each step below in order. AWS CLI, SAM CLI can be installed but can’t set up credentials until OSU IT sets up your account.**
-  - **Disclaimer**: Some of the below instructions may no longer be 100% accurate in the future **(last updated May 2024)**, as AWS is known to update their policies and web console UI periodically. If in doubt, check the **[official AWS IAM docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)**
+  - **Disclaimer**: Some of the below instructions may no longer be 100% accurate in the future **(last updated May 2024)**, as AWS is known to update their policies and web console UI periodically
+    - If in doubt, check the **[official AWS IAM docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)**
   - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
     - If you haven't gotten your AWS account set up yet, contact a current Sustainability Office Software Intern about this, or else reach out directly to OSU IT at leanne@engr.oregonstate.edu
   - IAM (set up authorized user account): [https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users)
