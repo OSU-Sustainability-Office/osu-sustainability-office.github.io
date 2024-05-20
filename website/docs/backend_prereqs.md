@@ -38,6 +38,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 ### AWS
 
 - AWS Stuff - **Do each step below in order. AWS CLI, SAM CLI can be installed but can’t set up credentials until OSU IT sets up your account.**
+
   - **Disclaimer**: Some of the below instructions may no longer be 100% accurate in the future **(last updated May 2024)**, as AWS is known to update their policies and web console UI periodically
     - If in doubt, check the **[official AWS IAM docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)**
   - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
@@ -51,14 +52,23 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
     - On Step 3, review and then click "Create User" button
     - On Step 4, view your password if you haven't already, and then click "Return to users list"
   - IAM (get access key ID)
+
     - Back to the Users List page, click on the user you just created ("yourname.cli"), then click on "Create access key"
       - ![Screenshot of this step 1](../static/img/user_list.png)
       - ![Screenshot of this step 2](../static/img/iam_create_access_key.png)
     - On Step 1 (next page), click "Other", then next
       - ![Screenshot of this step](../static/img/iam_access_key_step_1.png)
     - On Step 2, enter a name for your access key if you want (optional), then "Create access key" button
-    - On Step 3, you will see the login details of your user. Click “Show” on Secret Access key.\*\* **Make sure to save both your Access Key ID and Secret Access Key in txt file etc. locally, you will not be able to see Secret Access key again.**
-      - ![Screenshot of this step](../static/img/iam_access_key_step_3.png)
+    - On Step 3, you will see the login details of your user. Click “Show” on Secret Access key.
+
+    :::caution
+
+    Make sure to save both your Access Key ID and Secret Access Key in txt file etc. locally, **you will not be able to see the Secret Access key again.**
+
+    :::
+
+    - ![Screenshot of this step](../static/img/iam_access_key_step_3.png)
+
   - AWS CLI (for verifying AWS credentials):
     - Installation: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
     - Configuration Documentation: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
