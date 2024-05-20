@@ -29,7 +29,8 @@ It is pretty easy to determine if a certificate expiry is causing data upload er
 
 ## Requesting New Certificate
 
-- A week or two before the SSL certificate expires, contact OSU IT via the [InCommon SSL Certificate Request Form](https://is.oregonstate.edu/webform/incommon-ssl-certificate-request-preferred-ssl-option)
+- A week or two before the SSL certificate expires, contact OSU IT via the [Certificates Request Form](https://oregonstate.teamdynamix.com/TDClient/1935/Portal/Requests/ServiceDet?ID=25521) (click "Request Service" button)
+  - Add a short title and description to your certificate request as prompted; some ideas for what to put in the request description have been provided below:
   - Department: `Finance and Adminstration`
   - Service / Application / Common Name: `api.sustainability.oregonstate.edu`
   - Type of SSL Certificate: `I'm not sure which certificate I need`
