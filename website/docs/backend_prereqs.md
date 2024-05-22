@@ -38,18 +38,37 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 ### AWS
 
 - AWS Stuff - **Do each step below in order. AWS CLI, SAM CLI can be installed but can’t set up credentials until OSU IT sets up your account.**
+
+  - **Disclaimer**: Some of the below instructions may no longer be 100% accurate in the future **(last updated May 2024)**, as AWS is known to update their policies and web console UI periodically
+    - If in doubt, check the **[official AWS IAM docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)**
   - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
-    - The above login site may require OSU IT to set you up - Milan has sent email.
+    - If you haven't gotten your AWS account set up yet, contact a current Sustainability Office Software Intern about this, or else reach out directly to OSU IT at leanne@engr.oregonstate.edu
   - IAM (set up authorized user account): [https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users)
-    - Click “Add User”.
-    - On page 1 (next page) select “Access key - Programmatic access”.
-      - ![Screenshot of this step](https://media.discordapp.net/attachments/1018323831468851202/1062550730231267398/image.png?width=1440&height=604)
-    - On page 2 select “Copy Permissions from existing user” > “jeff-cli”.
-      - ![Screenshot of this step](https://media.discordapp.net/attachments/1018323831468851202/1062550838347841566/image.png?width=1440&height=611)
-    - On page 3, 4, 5, ignore and press Next / Confirm.
-    - On final page you will see the login details of your user. Click “Show” on Secret Access key.** Make sure to save both your Access Key ID and Secret Access Key in txt file etc. locally, you will not be able to see Secret Access key again.**
-      - ![Screenshot of this step](https://media.discordapp.net/attachments/1018323831468851202/1062550560324202506/image.png?width=1440&height=631)
-    - More Info: [https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html)
+    - Click “Add User” to begin
+    - On Step 1, enter a name for your new IAM user with the format "myname-cli" (substituting your actual name for "myname"). Check the checkboxes for "Provide user access to the AWS Management Console" and then set up your IAM user's password
+      - ![Screenshot of this step](../static/img/iam_step_1.png)
+    - On Step 2, select “Copy permissions” > copy from an existing user whose name ends with "-cli", e.g. "samantha-cli"
+      - ![Screenshot of this step](../static/img/iam_step_2.png)
+    - On Step 3, review and then click "Create User" button
+    - On Step 4, view your password if you haven't already, and then click "Return to users list"
+  - IAM (get access key ID)
+
+    - Back to the Users List page, click on the user you just created ("yourname.cli"), then click on "Create access key"
+      - ![Screenshot of this step 1](../static/img/user_list.png)
+      - ![Screenshot of this step 2](../static/img/iam_create_access_key.png)
+    - On Step 1 (next page), click "Other", then next
+      - ![Screenshot of this step](../static/img/iam_access_key_step_1.png)
+    - On Step 2, enter a name for your access key if you want (optional), then "Create access key" button
+    - On Step 3, you will see the login details of your user. Click “Show” on Secret Access key.
+
+    :::caution
+
+    Make sure to save both your Access Key ID and Secret Access Key in txt file etc. locally, **you will not be able to see the Secret Access key again.**
+
+    :::
+
+    - ![Screenshot of this step](../static/img/iam_access_key_step_3.png)
+
   - AWS CLI (for verifying AWS credentials):
     - Installation: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
     - Configuration Documentation: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
@@ -67,7 +86,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 
 - MySQL Workbench (for debugging database. Probably won’t need this right now tbh but good to set up.)
   - Installation: [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
-  - New Connection (Click Plus Sign): ![Screenshot](https://github.com/OSU-Sustainability-Office/osu-sustainability-office.github.io/blob/main/website/static/img/mysql_workbench_plus.PNG?raw=true)
+  - New Connection (Click Plus Sign): ![Screenshot](../static/img/mysql_workbench_plus.png)
   - [For MySQL credentials, see here](https://drive.google.com/file/d/1dY-t3bxLc3HRkjg2HDr6uyvcM3BIYKW0/view?usp=sharing)
     - Need to be paid employee of OSU Sustainability office to see above link
   - Once set up:
@@ -75,7 +94,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
     - Limit to 50,000 rows to avoid it taking too long.
     - Run test query, e.g. `select * from data order by time DESC;`
     - Click the lightning symbol to run query.
-    - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062556054711439451/image.png)
+    - ![sql example](../static/img/sql_example.png)
 
 ## General Documentation
 

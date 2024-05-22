@@ -34,7 +34,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 - Inspect Element (right click > inspect in Chrome or Firefox)
 - Vue Browser Debug Tools: [https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
   - Allows you to debug vue store in browser, e.g. `vue.$store.getters["map/building_1/description"]`
-  - ![Screenshot](https://media.discordapp.net/attachments/1018323831468851202/1062557315640873030/image.png?width=1440&height=606)
+  - ![vue browser debug](../static/img/vue_browser_debug.png)
 
 ### IDE
 
