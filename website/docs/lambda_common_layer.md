@@ -6,6 +6,8 @@ The Lambda Common Layer `.env` file typically does not need to be renewed, but i
 
 The Lambda Common Layer is a lambda layer used in most SO web applications to facilitate session handling, DB access and web responses. You can view the code for this in the [following repo](https://github.com/OSU-Sustainability-Office/lambda-common-layer).
 
+The LCL is currently using the Node.js 20 runtime with no deprecation date listed, [you can check here](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for lambda runtime deprecation dates. [Here is a PR](https://github.com/OSU-Sustainability-Office/lambda-common-layer/pull/35/files) to use as an example for upgrading the Node.js runtime. Follow the instructions in the README for testing the lambda functions locally.
+
 Encrypted `.env`:
 To prevent our access credentials from leaking we encrypt our `.env` file in our repository. The secrets can be viewed [here (must be paid OSU SO employee)](https://drive.google.com/file/d/1sTPdFUINTAz3VjnqNsootABAuxoG3DOA/view?usp=sharing)
 
