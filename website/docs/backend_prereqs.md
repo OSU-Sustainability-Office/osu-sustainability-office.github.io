@@ -41,7 +41,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
 
   - **Disclaimer**: Some of the below instructions may no longer be 100% accurate in the future **(last updated May 2024)**, as AWS is known to update their policies and web console UI periodically
     - If in doubt, check the **[official AWS IAM docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)**
-  - Login (some links below will fail if not logged in): [https://login.oregonstate.edu/apps/aws/](https://login.oregonstate.edu/apps/aws/)
+  - [Login here](https://login.oregonstate.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=urn:amazon:webservices)
     - If you haven't gotten your AWS account set up yet, contact a current Sustainability Office Software Intern about this, or else reach out directly to OSU IT at leanne@engr.oregonstate.edu
   - IAM (set up authorized user account): [https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users)
     - Click “Add User” to begin
