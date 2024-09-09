@@ -23,9 +23,31 @@ It is pretty easy to determine if a certificate expiry is causing data upload er
 
 ## When to Renew
 
+- For the last renewal, we used AWS's built in request feature to request a public SSL certificate, you can [see their docs here](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html). It should attempt to auto-renew at 11 months, so check around August/September to see if anything is needed on our end.
 - Check [SSL Shopper](https://www.sslshopper.com/ssl-checker.html#hostname=api.sustainability.oregonstate.edu/)
   - Specifically check the backend domain `api.sustainability.oregonstate.edu`. The similar-sounding `sustainability.oregonstate.edu` domain (used for our frontend) is managed by OSU
-- Check AWS Certificate Manager (AWS Console > Certificate Manager > click on any certificates with Domain Name of `api.sustainability.oregonstate.edu`)
+- Check AWS Certificate Manager (AWS Console > Certificate Manager > click on any certificates with Domain Name of `api.sustainability.oregonstate.edu` that is listed as `In Use`)
+
+## Requesting Certificate Through AWS Certificate Manager
+
+- If for some reason the auto-renewal doesn't work, request a new public SSL certificate through [AWS Certificate Manager](https://us-west-2.console.aws.amazon.com/acm/home?region=us-west-2#/certificates/list)
+  - Use `api.sustainability.oregonstate.edu` as the domain name, leave everything else as-is (DNS validation and RSA 2048)
+  - After clicking request, click on the newly created certificate to open the details. Export the CSV file in the `Domains` section (this contains the CNAME name and value) and send it to [OSU IT](https://mysupport.oregonstate.edu/esp?id=emp_taxonomy_topic&topic_id=05944f3897698e501b28bf98c253afc4) with a request for them to validate the CNAME, since we don't have access to it. Explain that we use this certificate for our Energy Dashboard.
+- Eventually the status in the certificate details tab will change to `Issued`, after which we need to set it as the certificate for the Load Balancer and API Gateway
+  - **Load Balancer**
+    - Navigate to `Load Balancers` > `energy-data-api` > `Listeners and rules`
+    - Check the box for the only Listener there, click `Manange listener` > `Edit Listener`
+    - Scroll down to `Secure listener settings` and change the `Certificate (from ACM)` to the newly created certificate
+  - **API Gateway**
+    - Navigate to `API Gateway` > `Custom domain names` > `api.sustainability.oregonstate.edu`
+    - Edit the `Endpoint configuration` tab
+    - Choose the new certificate in the `ACM certificate` dropdown
+- There should now be four resources listed under the `Associated resources` tab of the certificate details, and the Energy Dashboard should be working normally
+
+<details>
+<summary> Requesting and Manually Uploading A New Certificate (Old Version) </summary>
+
+This is how we used to update the SSL certificate and is being left in for now in case renewing with AWS doesn't work. Keep in mind that if you go this route you'll still need to update the load balancer and API gateway as listed above.
 
 ## Requesting New Certificate
 
@@ -68,6 +90,8 @@ It is pretty easy to determine if a certificate expiry is causing data upload er
   - Copy and paste as plain text the contents of the private key (refer to section above, should be labeled as `api_sustainability_oregonstate_edu.key`) into "Certificate Private Key" field
   - Copy and paste as text the contents of the `Certificate (w/ chain), PEM encoded` file into "Certificate Chain" field
   - Finish the import process. If SSL Shopper shows the expiration date as pushed forward a year afterwards, and the energy-dashboard (among other things) doesn't break, then you probably did it right
+
+</details>
 
 ## Helpful Resources (Summary)
 
