@@ -25,10 +25,6 @@ The kiosks all essentially run a browser which connects to a Vue application we 
 
 ## MU Kiosk (Windows Pro Running KioWare)
 
-### Notes:
-
-Located in the MU Commons near all the inside restaurants (Panda Express, TOGO, and whatever else is currently there). Computer is mounted on a mini-VESA mount (I _think_ it’s mini-VESA, you may want to double-check before performing an upgrade).
-
 ### Kiosk Configuration
 
 - See [KioWare](#kioware)
@@ -41,7 +37,8 @@ If for some reason you need hardware level access, the kiosk itself is on a moun
 
 - 1280x768
 - USB port on the left side of the kiosk computer, bring a mouse / keyboard / USB hub for debug if needed
-- This kiosk is located by the left wall when facing Rocket Burger / Panda Express (or whatever is there in the future _twilight zone soundtrack_), it is a very small device and doesn’t see as much traffic as our library kiosk does, but it is equally as important to keep updated.
+- Located in the MU Commons on the left wall when facing the restaurants. It is a very small device and doesn’t see as much traffic as our library kiosk does, but it is equally as important to keep updated.
+- Computer is mounted on a mini-VESA mount (I _think_ it’s mini-VESA, you may want to double-check before performing an upgrade).
 
 ## LINC Kiosk (Porteus Kiosk)
 
