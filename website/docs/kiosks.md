@@ -70,24 +70,24 @@ This Kiosk computer is an Intel Compute Stick with only one USB port, so you wil
 - 1920x1080
 - This kiosk is located directly across from the small elevator, next to the restrooms on the first floor. For support for this kiosk, submit a ticket to UHDS IS at: uhds.link/support.
 
-## General Info
-
-### KioWare
-
-- To make adjustments to KioWare configuration:
-  - Starting from the upper left corner of the screen, tap the 4 corners clockwise (might take more than 4 taps, just keep going clockwise till it works)
-    - Reference: https://www.kioware.com/faqs.aspx?id=-162698673
-  - Enter 4 digit unlock code (see [credentials](#credentials))
-  - This will automatically log you out
-  - Switch to "admin" Windows user, enter Windows Admin password (see [credentials](#credentials)) to login
-  - Make sure to have a keyboard / mouse handy after this point for making configuration changes (or use the Windows on-screen keyboard)
-  - After logging in, open "KioWare Client Configuration" program
-  - Current Configuration
-    - Resets after 5 minutes of inactivity
-      - Reference: https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractTab
-    - Note: the kiosk webpage also automatically refreshes within 10 minutes after new changes are pushed to the sustainability-kiosks github repo, which should handle content updates
-    - Also included daily hard refresh at 6 AM as as failsafe
-    - **Attract Screens**
-      - These screens are a slideshow that is designed to give people brief information that will bring them into the kiosk. These can be images or video screens. As soon as the screen is touched you get sent to the kiosk homepage.
-        - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractScreens)
-    - KioWare also comes with built-in functionality for forwards and backwards webpage navigation (swipe left / right on screen)
+## Adjusting KioWare Configuration
+1. Starting from the upper left corner of the screen, tap the 4 corners clockwise.  
+   - It may take more than 4 taps; keep going clockwise until it works.  
+   - [Reference](https://www.kioware.com/faqs.aspx?id=-162698673)  
+2. Enter the 4-digit unlock code (see [credentials](#credentials)).  
+   - This will automatically log you out.  
+3. Switch to the **admin** Windows user and enter the Windows Admin password (see [credentials](#credentials)) to log in.  
+4. Make sure you have a keyboard and mouse handy for configuration (or use the Windows on-screen keyboard).  
+5. Open the **KioWare Client Configuration** program.  
+### Additional Information
+- **Current Configuration**
+  - Resets after 5 minutes of inactivity  
+    - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractTab)
+  - The kiosk webpage automatically refreshes within 10 minutes after new changes are pushed to the `sustainability-kiosks` GitHub repo (handles content updates).
+  - A daily hard refresh also occurs at 6 AM as a failsafe.
+- **Attract Screens**
+  - These are slideshow screens (images or videos) that provide brief information to draw people in.  
+  - Touching the screen sends the user to the kiosk homepage.  
+  - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractScreens)
+- **Navigation**
+  - KioWare includes built-in functionality for forward and backward navigation (swipe left/right on screen).  
