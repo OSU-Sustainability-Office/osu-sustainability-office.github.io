@@ -5,12 +5,6 @@ description: Kiosks / Kiosks Website Documentation
 
 This document contains important information about managing the several Sustainability Kiosks which the Sustainability Office manages. Currently there are Kiosks in LInC, the MU, the Valley Library and the SEC.
 
-## QR Codes
-
-Use [this website](https://www.qrcode-monkey.com) for generating new QR codes (if needed), for the `/#/sec` page (https://osu-sustainability-office.github.io/sustainability-kiosks/#/sec)
-
-- According to [their About Page](https://www.qrcode-monkey.com/#about), you get links that last forever (no expiring), and no need to make an account or pay to use it
-
 ## Kiosk Website Info
 
 The kiosks all essentially run a browser which connects to a Vue application we run on GitHub Pages.
@@ -33,7 +27,7 @@ The kiosks all essentially run a browser which connects to a Vue application we 
 
 If for some reason you need hardware level access, the kiosk itself is on a mount which is easily detachable via unhooking the lock contraption on the bottom of the mount. **Be careful when unhooking the lock, the kiosk may immediately start to fall**. There should be a padlock keeping this detachable lock contraption in place, you will want to contact Mike Mayers (building manager at MU) for assistance (the padlock code).
 
-### Other Info
+### Additional Information
 
 - 1280x768
 - USB port on the left side of the kiosk computer, bring a mouse / keyboard / USB hub for debug if needed
@@ -41,10 +35,16 @@ If for some reason you need hardware level access, the kiosk itself is on a moun
 - Computer is mounted on a mini-VESA mount (I _think_ it’s mini-VESA, you may want to double-check before performing an upgrade).
 
 ## LINC Kiosk (Porteus Kiosk)
+Located under the main staircase on the first floor of LINC.  
 
-### Notes:
+### Hardware and OS
+The LINC kiosk computer is an Intel NUC which runs [Porteus Kiosk](https://porteus-kiosk.org/) rather than KioWare. Unlike the KioWare kiosks this one can’t be easily modified since there’s no code to unlock the kiosk and reconfigure it.
 
-Located under the main staircase on the first floor of LINC, the LINC kiosk computer is an Intel NUC which runs [Porteus Kiosk](https://porteus-kiosk.org/) rather than KioWare. Unlike the KioWare kiosks this one can’t be easily modified since there’s no code to unlock the kiosk and reconfigure it. To change a kiosk setting, you will need to re-install Porteus Kiosk, which used to be relatively easy, but they have since moved to a paid model and we no longer have access to the files we need to re-install it. If you need to change a kiosk setting or if the kiosk OS fails and will no longer work, you will need to use an alterantive solution that is outlined [in this document](https://docs.google.com/document/d/1SSehenWVNsSmiOiyzWv8hSBRxiFihl54C7RGu5SlUtc/edit?tab=t.0#heading=h.wf398kazbr04) (you must be a paid OSU Sustainability Office employee to access this document).
+### Configuration Changes
+To change a kiosk setting, you will need to re-install Porteus Kiosk, which used to be relatively easy, but they have since moved to a paid model and we no longer have access to the files we need to re-install it.
+
+### Alternative Solution
+If you need to change a kiosk setting or if the kiosk OS fails and will no longer work, you will need to use an alterantive solution that is outlined [in this document](https://docs.google.com/document/d/1SSehenWVNsSmiOiyzWv8hSBRxiFihl54C7RGu5SlUtc/edit?tab=t.0#heading=h.wf398kazbr04) (you must be a paid OSU Sustainability Office employee to access this document).
 
 ## Valley Library Kiosk (Porteous Kiosk)
 
@@ -52,7 +52,7 @@ This is a pretty intimidating kiosk located outside of JAVA II which is on a sli
 
 This Kiosk computer is an Intel Compute Stick with only one USB port, so you will need to bring a USB hub (Brandon T. has one) to connect a keyboard and mouse to it.
 
-### Other Info
+### Additional Information
 
 - 1920x1080
 - Bring Keyboard, Mouse, and USB Hub
@@ -62,10 +62,16 @@ This Kiosk computer is an Intel Compute Stick with only one USB port, so you wil
 
 - According to Milan, this is set up by UHDS - some kind of “mobile windows distro”, or “regular windows in kiosk mode”
 
-### Other Info
+### Additional Information
 
 - 1920x1080
-- This kiosk is located directly across from the small elevator, next to the restrooms on the first floor. For support for this kiosk, submit a ticket to UHDS IS at: uhds.link/support.
+- This kiosk is located directly across from the small elevator, next to the restrooms on the first floor. For support for this kiosk, submit a ticket to UHDS IS at: [uhds.link/support](https://uhds.link/support).
+
+## Generating QR Codes
+
+Use [this website](https://www.qrcode-monkey.com) for generating new QR codes (if needed), for the `/#/sec` page (https://osu-sustainability-office.github.io/sustainability-kiosks/#/sec)
+
+- According to [their About Page](https://www.qrcode-monkey.com/#about), you get links that last forever (no expiring), and no need to make an account or pay to use it
 
 ## Adjusting KioWare Configuration
 1. Starting from the upper left corner of the screen, tap the 4 corners clockwise.  
