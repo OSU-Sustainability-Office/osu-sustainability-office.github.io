@@ -5,96 +5,92 @@ description: Kiosks / Kiosks Website Documentation
 
 This document contains important information about managing the several Sustainability Kiosks which the Sustainability Office manages. Currently there are Kiosks in LInC, the MU, the Valley Library and the SEC.
 
-## QR Codes
-
-Use [this website](https://www.qrcode-monkey.com) for generating new QR codes (if needed), for the `/#/sec` page (https://osu-sustainability-office.github.io/sustainability-kiosks/#/sec)
-
-- According to [their About Page](https://www.qrcode-monkey.com/#about), you get links that last forever (no expiring), and no need to make an account or pay to use it
-
-## Software
+## Kiosk Website Info
 
 The kiosks all essentially run a browser which connects to a Vue application we run on GitHub Pages.
 
-- **GitHub Repository: **[https://github.com/OSU-Sustainability-Office/sustainability-kiosks](https://github.com/OSU-Sustainability-Office/sustainability-kiosks)
-- **Deployed Page: **[https://osu-sustainability-office.github.io/sustainability-kiosks/#/](https://osu-sustainability-office.github.io/sustainability-kiosks/#/)
+- **GitHub Repository:** [https://github.com/OSU-Sustainability-Office/sustainability-kiosks](https://github.com/OSU-Sustainability-Office/sustainability-kiosks)
+- **Deployed Page:** [https://osu-sustainability-office.github.io/sustainability-kiosks/#/](https://osu-sustainability-office.github.io/sustainability-kiosks/#/)
 
 ## Credentials
 
 - See this document: https://drive.google.com/file/d/1NWv2sBFblABVEjcZgctbjFyZU2mPDTus/view?usp=drive_link
   - You will need to be a paid OSU Sustainability Office employee to access this
 
-## MU Kiosk (Windows Pro Running Kioware)
+## MU Kiosk (Windows Pro Running KioWare)
 
-### Notes:
+### Kiosk Configuration
 
-Located in the MU Commons near all the inside restaurants (Panda Express, TOGO, and whatever else is currently there). Computer is mounted on a mini-VESA mount (I _think_ it’s mini-VESA, you may want to double-check before performing an upgrade).
+- See [KioWare](#kioware)
 
-### Physical Access:
+### Physical Access
 
-The kiosk itself is on a mount which is easily detachable via unhooking the lock contraption on the bottom of the mount. **Be careful when unhooking the lock, the kiosk may immediately start to fall**. There should be a padlock keeping this detachable lock contraption in place, ideally the _master-brand key_ on the master key set for meter reads should unlock it--otherwise you will want to contact Mike Mayers (building manager at MU) for assistance (the code).
+If for some reason you need hardware level access, the kiosk itself is on a mount which is easily detachable via unhooking the lock contraption on the bottom of the mount. **Be careful when unhooking the lock, the kiosk may immediately start to fall**. There should be a padlock keeping this detachable lock contraption in place, you will want to contact Mike Mayers (building manager at MU) for assistance (the padlock code).
 
-## LINC Kiosk (Porteus OS)
+### Additional Information
 
-### Notes:
+- 1280x768
+- USB port on the left side of the kiosk computer, bring a mouse / keyboard / USB hub for debug if needed
+- Located in the MU Commons on the left wall when facing the restaurants. It is a very small device and doesn’t see as much traffic as our library kiosk does, but it is equally as important to keep updated.
+- Computer is mounted on a mini-VESA mount (I _think_ it’s mini-VESA, you may want to double-check before performing an upgrade).
 
-Located under the main staircase on the first floor of LINC, the LINC kiosk computer is an Intel NUC which runs [Porteus OS](https://porteus-kiosk.org/) rather than kioware. Unlike the Kioware kiosks this one can’t be easily modified since there’s no code to unlock the kiosk and reconfigure it. From my limited understanding, to change a kiosk setting would require re-installing Porteus OS which luckily enough is relatively easy.
+## LINC Kiosk (Porteus Kiosk)
+Located under the main staircase on the first floor of LINC.  
 
-#### How to re-install Porteus OS & change settings:
+### Hardware and OS
+The LINC kiosk computer is an Intel NUC which runs [Porteus Kiosk](https://porteus-kiosk.org/) rather than KioWare. Unlike the KioWare kiosks this one can’t be easily modified since there’s no code to unlock the kiosk and reconfigure it.
 
-To re-install Porteus OS you’ll want to make a bootable USB drive using the .ISO file from [https://porteus-kiosk.org/](https://porteus-kiosk.org/) and then some usb-formatting utility (e.g.** win32diskimager** or try another one the Porteus OS people recommend--not all of them work). Once you have the USB drive you simply need to plug it in and restart the kiosk and you should be greeted with a set-up wizard (you shouldn’t need to mess around with the BIOS since it looks like it already prioritizes USB drives as boot drives).
+### Configuration Changes
+To change a kiosk setting, you will need to re-install Porteus Kiosk, which used to be relatively easy, but they have since moved to a paid model and we no longer have access to the files we need to re-install it.
 
-The settings are currently enabled on the kiosk are as follows:
+### Alternative Solution
+If you need to change a kiosk setting or if the kiosk OS fails and will no longer work, you will need to use an alterantive solution that is outlined [in this document](https://docs.google.com/document/d/1SSehenWVNsSmiOiyzWv8hSBRxiFihl54C7RGu5SlUtc/edit?tab=t.0#heading=h.wf398kazbr04) (you must be a paid OSU Sustainability Office employee to access this document).
 
-- It’s configured to automatically connect to eduroam via wifi (uses my credentials at the moment)
-  - If you don’t want to add your own credentials (which is smart) you’ll need to contact the building manager @ LiNC to add the device to the Ethernet port behind the wall. For assistance with this I recommend contacting Martin.
-- It uses chrome
-- The navigation bar is disabled
-- It automatically restarts the session after 5 minutes of inactivity
-- has a custom home page of [https://osu-sustainability-office.github.io/sustainability-kiosks/](https://osu-sustainability-office.github.io/sustainability-kiosks/)
-
-It’s highly recommended that you heavily test the kiosk in the office prior to reinstalling the kiosk in LINC.
-
-**PREVIOUSLY ENCOUNTERED PROBLEMS & SOLUTIONS:**
-
-- **After making usb bootable, it’s not longer capable of being reformatted in windows to the point where it doesn’t even show up in the File Explorer:**
-  - **[Rufus ](https://rufus.ie/en/)**is a good way of reformatting a seemingly broken USB drive.
-  - Windows OS utilities are really fickle and don’t work in a lot of edge cases.
-- **Can’t select .iso file in win32diskimager**
-  - Change expected file extension to “.\*” and then the program should allow for selecting an .iso image.
-
-## Valley Library Kiosk (Porteous OS)
+## Valley Library Kiosk (Porteous Kiosk)
 
 This is a pretty intimidating kiosk located outside of JAVA II which is on a sliding stand thing with two phillips screwdrivers on the bottom. To get at the kiosk computer you’ll need the help of another person to slide the wall monitor off the hinges and gently onto the ground. At this point you just need to install the kiosk computer.
 
-This Kiosk computer was recently upgraded to an Intel Compute Stick.
+This Kiosk computer is an Intel Compute Stick with only one USB port, so you will need to bring a USB hub (Brandon T. has one) to connect a keyboard and mouse to it.
+
+### Additional Information
+
+- 1920x1080
+- Bring Keyboard, Mouse, and USB Hub
+- The library kiosk is our large kiosk. It is located outside of Java II and sees a lot of traffic. It is good to make a screen for our events that shows as an attract screen on this kiosk.
 
 ## SEC Kiosk
 
 - According to Milan, this is set up by UHDS - some kind of “mobile windows distro”, or “regular windows in kiosk mode”
 
-## General Info
-
-You can get to the kiosk homepage on a desktop at this address:
-
-[http://fa.oregonstate.edu/sustainability-osu](http://fa.oregonstate.edu/sustainability-osu)
-
-**Attract Screens**
-
-- These screens are a slideshow that is designed to give people brief information that will bring them into the kiosk. These can be images or video screens. As soon as the screen is touched you get sent to the kiosk homepage.
-
-**Library**
+### Additional Information
 
 - 1920x1080
-- Bring Keyboard and Mouse
-- The library kiosk is our large kiosk. It is located outside of Java II and sees a lot of traffic. It is good to make a screen for our events that shows as an attract screen on this kiosk.
+- This kiosk is located directly across from the small elevator, next to the restrooms on the first floor. For support for this kiosk, submit a ticket to UHDS IS at: [uhds.link/support](https://uhds.link/support).
 
-**MU**
+## Generating QR Codes
 
-- 1280x768
-- USB doesn’t work
-- This kiosk is located by Joe’s Burgers (or whatever is there in the future _twilight zone soundtrack_), it is a very small device and doesn’t see as much traffic as our library kiosk does, but it is equally as important to keep updated.
+Use [this website](https://www.qrcode-monkey.com) for generating new QR codes (if needed), for the `/#/sec` page (https://osu-sustainability-office.github.io/sustainability-kiosks/#/sec)
 
-**SEC**
+- According to [their About Page](https://www.qrcode-monkey.com/#about), you get links that last forever (no expiring), and no need to make an account or pay to use it
 
-- 1920x1080
-- This kiosk is located directly across from the small elevator, next to the restrooms on the first floor. For support for this kiosk, submit a ticket to UHDS IS at: uhds.link/support.
+## Adjusting KioWare Configuration
+1. Starting from the upper left corner of the screen, tap the 4 corners clockwise.  
+   - It may take more than 4 taps; keep going clockwise until it works.  
+   - [Reference](https://www.kioware.com/faqs.aspx?id=-162698673)  
+2. Enter the 4-digit unlock code (see [credentials](#credentials)).  
+   - This will automatically log you out.  
+3. Switch to the **admin** Windows user and enter the Windows Admin password (see [credentials](#credentials)) to log in.  
+4. Make sure you have a keyboard and mouse handy for configuration (or use the Windows on-screen keyboard).  
+5. Open the **KioWare Client Configuration** program.  
+### Additional Information
+- **Current Configuration**
+  - Resets after 5 minutes of inactivity  
+    - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractTab)
+  - The kiosk webpage automatically refreshes within 10 minutes after new changes are pushed to the `sustainability-kiosks` GitHub repo (handles content updates).
+  - A daily hard refresh also occurs at 6 AM as a failsafe.
+- **Attract Screens**
+  - These are slideshow screens (images or videos) that provide brief information to draw people in.  
+  - Touching the screen sends the user to the kiosk homepage.  
+  - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractScreens)
+- **Navigation**
+  - KioWare includes built-in functionality for forward and backward navigation (swipe left/right on screen).  
