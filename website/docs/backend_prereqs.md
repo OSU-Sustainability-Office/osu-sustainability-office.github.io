@@ -32,8 +32,7 @@ We use Yarn for this wiki. Run this _after_ you have set up npm. You may have to
   - **This one is for Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
   - **Use this one for Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
     - Make sure to uninstall existing Node installation just in case: [https://github.com/coreybutler/nvm-windows#installation--upgrades](https://github.com/coreybutler/nvm-windows#installation--upgrades)
-    - Read instructions in the repo README for general tips on installing specific node versions.
-  - Use Node 18 ( `nvm use 18 `)
+    - Node version will vary between repositories. Read instructions in the repository's README to determine which version to use.
 
 ### AWS
 
