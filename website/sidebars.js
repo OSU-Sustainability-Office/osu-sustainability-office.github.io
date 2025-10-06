@@ -20,11 +20,11 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'frontend_prereqs',
+      id: 'frontend_prerequisites',
     },
     {
       type: 'doc',
-      id: 'backend_prereqs',
+      id: 'backend_prerequisites',
     },
     {
       type: 'doc',
