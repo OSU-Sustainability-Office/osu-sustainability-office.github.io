@@ -1,9 +1,9 @@
 ---
-title: Backend Prerequisites
+title: Backend Prereqs
 description: Backend / proprietary software that must be installed in advance
 ---
 
-# Backend Prerequisites
+# Backend Prereqs
 This page outlines the tools and setup required before running any OSU Sustainability Office backend projects locally.
 
 ## What you need

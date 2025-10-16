@@ -1,9 +1,9 @@
 ---
-title: Frontend Prerequisites
+title: Frontend Prereqs
 description: Frontend software that must be installed in advance (Open Source Friendly)
 ---
 
-# Frontend Prerequisites
+# Frontend Prereqs
 This page outlines the tools and setup required before running any OSU Sustainability Office frontend projects locally.
 
 ## What you need

@@ -5,7 +5,7 @@ description: Quick fixes for some common issues
 
 ## Important
 
-This document assumes you have already gone through the [Frontend Prerequisites](frontend_prerequisites) and [Backend Prerequisites](backend_prerequisites) docs.
+This document assumes you have already gone through the [Frontend Prereqs](frontend_prereqs) and [Backend Prereqs](backend_prereqs) docs.
 
 If you haven't already, please read through and follow those instructions first before returning; this is a **condensed** document written for quick help and not a thorough manual.
 
@@ -19,7 +19,7 @@ If you haven't already, please read through and follow those instructions first 
 - `npm run format` or `yarn format` (for wiki) are for auto-formatting code
 - For more specific info, see the `README.md` or `package.json` of the individual repos as seen [here](getting_started#active-projects)
   - Note that some projects host separate `package.json` for backend folders
-- See [Frontend Prerequisites](frontend_prerequisites) and [Backend Prerequisites](backend_prerequisites) docs also; they are written mostly for energy-dashboard but should apply to most other Vue applications we use
+- See [Frontend Prereqs](frontend_prereqs) and [Backend Prereqs](backend_prereqs) docs also; they are written mostly for energy-dashboard but should apply to most other Vue applications we use
 
 ## Git
 
@@ -40,7 +40,7 @@ Important AWS Services for OSU SO (non-exhaustive)
 
 ## MySQL
 
-- See [Backend Prerequisites](backend_prerequisites#mysql-workbench)
+- See [Backend Prereqs](backend_prereqs#mysql-workbench)
 - https://www.w3schools.com/sql/default.asp is your friend
 - You will need this for:
   - [Solar data missed upload](cloudwatch)

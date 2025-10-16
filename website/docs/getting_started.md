@@ -36,8 +36,8 @@ Our GitHub Organization: [OSU Sustainability Office](https://github.com/OSU-Sust
 
 ## Contributing
 
-- See [Frontend Prerequisites](frontend_prerequisites) doc for setup instructions for running the frontend locally
-- See [Backend Prerequisites](backend_prerequisites) doc for setup instructions for running the backend locally
+- See [Frontend Prereqs](frontend_prereqs) doc for setup instructions for running the frontend locally
+- See [Backend Prereqs](backend_prereqs) doc for setup instructions for running the backend locally
 - Any Frontend work is open to PR's / open source
 - Anything touching backend, including our NodeJS server (running locally), running AWS backend locally, or running AWS CRON jobs (for automated-jobs) can only be done by paid OSU Sustainability Office employees for security reasons
 - Open source contributors can run the production API endpoints for energy-dashboard and carbon-calculator, for debugging frontend-only issues
