@@ -37,7 +37,7 @@ description: Overview of Cloudwatch and SNS Email Alerts
 - You will get emails for:
   - Solar Webscraper (SEC). Alert emails are labeled `TimeoutError` Job runs daily, you will only get an email if there is an upload error / timeout
   - Meter Outage Checker (check-acq). Alert emails are labeled `3Or4DaysOutage`. Job runs every 2 days, you will only get an email if there if a new meter has been down for 3 or 4 days (to prevent email spam for meters that are constantly down)
-  - See below for what to do in case you get emails about the two things baove
+  - See below for what to do in case you get emails about the two things above
 - You can set up a custom email rule in Outlook via `right click email` > `rules` > `create a new rule`, to avoid cluttering your inbox
 
 ## SQL Debugging / Upload Missing Data

@@ -3,7 +3,7 @@ title: Kiosks
 description: Kiosks / Kiosks Website Documentation
 ---
 
-This document contains important information about managing the several Sustainability Kiosks which the Sustainability Office manages. Currently there are Kiosks in LInC, the MU, the Valley Library and the SEC.
+This document contains important information about managing the several Sustainability Kiosks which the Sustainability Office manages. Currently there are Kiosks in LINC, the MU, the Valley Library and the SEC.
 
 ## Kiosk Website Info
 
@@ -44,9 +44,9 @@ The LINC kiosk computer is an Intel NUC which runs [Porteus Kiosk](https://porte
 To change a kiosk setting, you will need to re-install Porteus Kiosk, which used to be relatively easy, but they have since moved to a paid model and we no longer have access to the files we need to re-install it.
 
 ### Alternative Solution
-If you need to change a kiosk setting or if the kiosk OS fails and will no longer work, you will need to use an alterantive solution that is outlined [in this document](https://docs.google.com/document/d/1SSehenWVNsSmiOiyzWv8hSBRxiFihl54C7RGu5SlUtc/edit?tab=t.0#heading=h.wf398kazbr04) (you must be a paid OSU Sustainability Office employee to access this document).
+If you need to change a kiosk setting or if the kiosk OS fails and will no longer work, you will need to use an alternative solution that is outlined [in this document](https://docs.google.com/document/d/1SSehenWVNsSmiOiyzWv8hSBRxiFihl54C7RGu5SlUtc/edit?tab=t.0#heading=h.wf398kazbr04) (you must be a paid OSU Sustainability Office employee to access this document).
 
-## Valley Library Kiosk (Porteous Kiosk)
+## Valley Library Kiosk (Porteus Kiosk)
 
 This is a pretty intimidating kiosk located outside of JAVA II which is on a sliding stand thing with two phillips screwdrivers on the bottom. To get at the kiosk computer you’ll need the help of another person to slide the wall monitor off the hinges and gently onto the ground. At this point you just need to install the kiosk computer.
 

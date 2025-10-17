@@ -12,7 +12,7 @@ description: SSL certificate explainer / how to renew certificate
 
 ## SSL Background
 
-HTTPS is enabled for our API (`api.sustinability.oregonstate.edu`) via SSL certificates. It is critical that these certificates (and the certificates in our certificate chain) do not expire. If one or more certificates expire, our Acquisuite Data Acquisition Servers will not be able to connect to the Energy Dashboard data upload API endpoint. They use an older version of OpenSSL that will fail if any certificate in our certificate chain expires.
+HTTPS is enabled for our API (`api.sustainability.oregonstate.edu`) via SSL certificates. It is critical that these certificates (and the certificates in our certificate chain) do not expire. If one or more certificates expire, our Acquisuite Data Acquisition Servers will not be able to connect to the Energy Dashboard data upload API endpoint. They use an older version of OpenSSL that will fail if any certificate in our certificate chain expires.
 
 It is pretty easy to determine if a certificate expiry is causing data upload errors. Typical signs include:
 

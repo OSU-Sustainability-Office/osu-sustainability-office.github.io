@@ -80,7 +80,7 @@ Step 3: Create Access Keys
 ### AWS CLI
 Used to verify AWS credentials.
 - [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
--	[Configuration Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
+- [Configuration Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
 
 Run after installation:
 - `aws configure`
