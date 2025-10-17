@@ -91,7 +91,7 @@ Run after installation:
 ### MySQL Workbench
 Used for debugging database.
 
-Step 1: [Download MySQL Workbench]((https://www.mysql.com/products/workbench/))
+Step 1: [Download MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 Step 2: Create a new connection using the + icon
 - [MySQL Credentials (Employees Only)](https://drive.google.com/file/d/1dY-t3bxLc3HRkjg2HDr6uyvcM3BIYKW0/view?usp=sharing)
