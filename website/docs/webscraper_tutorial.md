@@ -16,9 +16,9 @@ description: Guide on adding webscrapers to Energy Dashboard
     - [Link to .env files](https://drive.google.com/drive/u/1/folders/1geuKCp-aTIrde2WdJkE3f_L2TsF46_O3) (Need to be a paid OSU Sustainability Office Employee to see this link)
     - Env files that are used by automated jobs will have a file name like "automated-jobs-XXXX.env.txt" (e.g. automated-jobs-pacific.env.txt for the pacific power scraper). 
     - Env files need `DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy` unless you are making changes to energy dashboard (more on this in Testing Pipeline section)
-3. Ensure you are using the correct node version. Node version could potentially vary between automated jobs so refer to the README.MD in folder of the automated job.
+3. Ensure you are using the correct node version. Node version could potentially vary between automated jobs so refer to the README.md in folder of the automated job.
 4. `npm i` to install packages.
-5. `node <Javascript file name>`, e.g. `node readsec.js` to run web scraper.
+5. `node <Javascript file name>`, e.g. `node readsec.js` to run webscraper.
 
 ## AWS ECR (Elastic Container Registry)
 
@@ -31,7 +31,7 @@ This is only necessary if a new automated job has been developed.
 1. Click "Create repository"
 2. In the "General settings" section, enter the repository name
 3. Leave everything else as-is and click "Create"
-4. Proceed to [Creating a new task definition](./webscraper_tutorial#creating-a-new-cluster) section
+4. Proceed to [Creating a new task definition](./webscraper_tutorial#creating-a-new-task-definition) section
 
 ### Pushing an image to an existing repository
 Follow these steps when updating an existing automated job.
@@ -45,7 +45,7 @@ Follow these steps when updating an existing automated job.
   - Install the specific module for managing ECR through the AWS Tools for PowerShell using: `Install-AWSToolsModule AWS.Tools.ECR`
 
 **Steps**
-1. From the [AWS ECR Private repositories list](https://us-west-2.console.aws.amazon.com/ecs/v2/clusters?region=us-west-2), navigate to the desired automated job.
+1. From the [AWS ECR Private repositories list](https://us-west-2.console.aws.amazon.com/ecr/repositories?region=us-west-2), navigate to the desired automated job.
 2. Click "View push commands"
 3. Follow the AWS-provided push commands to authenticate, build, tag, and push your Docker image to the selected repository.
 
@@ -91,7 +91,7 @@ Follow these steps in order to test your webscraper changes.
 **Prerequisites:**
 - Ensure Node.js, Docker Desktop, and MySQL Workbench are installed
 - Have access credentials for the SQL database and Energy Dashboard API
-- Have the `.env` file for your automated job (e.g., `automated-jobs/SEC/.env`)
+- Have the `.env` file for your automated job (e.g., `automated-jobs/SEC/.env`) ([Link to .env files](https://drive.google.com/drive/u/1/folders/1geuKCp-aTIrde2WdJkE3f_L2TsF46_O3))
 
 **Setup:**
 1. Navigate to your automated job folder (e.g., `automated-jobs/SEC/`)
