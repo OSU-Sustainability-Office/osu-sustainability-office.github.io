@@ -12,8 +12,8 @@ description: Overview of tasks to do for Kilowatt Crackdown
 
 ## Overview
 
-- Add item to `campaigns` table as per notice from Lety on what residential buildings will particpate in Kilowatt Crackdown this year. Pay attention to:
-  - `date_start` and `date_end`. These denote when the Kilwatt Crackdown will take place. Ensure the meter data between these dates is valid
+- Add item to `campaigns` table as per notice from Lety on what residential buildings will participate in Kilowatt Crackdown this year. Pay attention to:
+  - `date_start` and `date_end`. These denote when the Kilowatt Crackdown will take place. Ensure the meter data between these dates is valid
   - `compare_start` and `compare_end`. These define a time period that the Kilowatt Campaign is compared to in order to calculate changes in energy efficiency for residential halls. Again, ensure the meter data here is valid before proceeding
     - Ask Lety for the comparison dates, she will have an idea
     - If meter data is missing for either time period, inform Lety ASAP and try to find workarounds

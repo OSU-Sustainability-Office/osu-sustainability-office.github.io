@@ -27,7 +27,7 @@ The following tables in the SQL database should be updated each time a new meter
   - Get map ID from https://www.openstreetmap.org/ ("way" on openstreetmap = map ID in database)
 - `meter_group_relation`
 
-  - Match the corresponding meter group and meter ID together in. One meter group can be mapped to several meters, but not the other way around
+  - Match the corresponding meter group and meter ID together in the meter_group_relation table. One meter group can be mapped to several meters, but not the other way around
 
 - See [Database](database) document for help on updating / inserting buildings and meters
 
