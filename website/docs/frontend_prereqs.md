@@ -8,11 +8,16 @@ This page outlines the tools and setup required before running any OSU Sustainab
 
 ## What you need
 
-### Node & NVM (recommended)
+### IDE
+
+Use any editor you like. VS Code works great.
+- If using VS Code, make sure you install extensions that are relevant to the repository (Vue, ESLint, Prettier, etc.)
+
+### NVM / Node.JS
 
 Using a version manager makes switching Node versions seamless.
-- macOS / Linux (nvm): https://github.com/nvm-sh/nvm
-- Windows (nvm-windows): https://github.com/coreybutler/nvm-windows
+- **Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+- **Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
   - Uninstall any existing Node first: see the “Installation & Upgrades” notes on that page.
 - Choose the Node version listed in the project’s README (if present). If unsure, try a long-term support node version (e.g. Node 18 or 20).
 
@@ -26,11 +31,6 @@ Install **after** Node is set up. You may have to re-run this if you switch Node
 
 - Inspect Element (right click > inspect in Chrome or Firefox)
 - Vue Browser Debug Tools: [Link to Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
-
-### IDE
-
-Use any editor you like. VS Code works great.
-- If using VS Code, make sure you install extensions that are relevant to the repository (Vue, ESLint, Prettier, etc.)
 
 ## Running the Frontend
 

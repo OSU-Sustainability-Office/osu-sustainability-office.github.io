@@ -8,38 +8,30 @@ This page outlines the tools and setup required before running any OSU Sustainab
 
 ## What you need
 
+### IDE
+
+Use any editor you like. VS Code works great.
+- If using VS Code, make sure you install extensions that are relevant to the repository (Vue, ESLint, Prettier, etc.)
+
+### NVM / Node.JS
+
+Using a version manager makes switching Node versions seamless.
+- **Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+- **Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
+  - Uninstall any existing Node first: see the “Installation & Upgrades” notes on that page.
+- Choose the Node version listed in the project’s README (if present). If unsure, try a long-term support node version (e.g. Node 18 or 20).
+
 ### Docker
 
 - Docker & Docker Compose (for local backend testing):
   - [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
   - Select “Docker Desktop for &lt;Your Platform>”
 
-### Node & NVM (recommended)
-
-Using a version manager makes switching Node versions seamless.
-- macOS / Linux (nvm): https://github.com/nvm-sh/nvm
-- Windows (nvm-windows): https://github.com/coreybutler/nvm-windows
-  - Uninstall any existing Node first: see the “Installation & Upgrades” notes on that page.
-- Choose the Node version listed in the project’s README (if present). If unsure, try a long-term support node version (e.g. Node 18 or 20).
-
 ### Yarn _(required only for wiki development)_
 
 Install **after** Node is set up. You may have to re-run this if you switch NodeJS versions with NVM as listed below.
 
 - `npm install --global yarn`
-
-### NVM / NodeJS
-
-- Node Version Manager (nvm):
-  - This isn’t required but I highly recommend it (very annoying to switch NodeJS versions otherwise).
-  - **This one is for Apple / Linux**: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
-  - **Use this one for Windows**: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
-    - Make sure to uninstall existing Node installation just in case: [https://github.com/coreybutler/nvm-windows#installation--upgrades](https://github.com/coreybutler/nvm-windows#installation--upgrades)
-    - Node version will vary between repositories. Read instructions in the repository's README to determine which version to use.
-
-### IDE
-
-Use any editor you like. VS Code works great.
 
 ### AWS Setup
 
