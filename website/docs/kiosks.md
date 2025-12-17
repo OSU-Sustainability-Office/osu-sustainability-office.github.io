@@ -52,6 +52,28 @@ This is a pretty intimidating kiosk located outside of JAVA II which is on a sli
 
 This Kiosk computer is an Intel Compute Stick with only one USB port, so you will need to bring a USB hub (Brandon T. has one) to connect a keyboard and mouse to it.
 
+### Troubleshooting
+1. Turn on the monitor.
+Press and hold the far-right button to power it on. Make sure the power switch is on and all cables are connected. To confirm the monitor is powered, press the far-left button on the bottom; if the on-screen menu appears, the monitor is on.
+2. Turn on the computer.
+Press and hold the button on the computer puck. Confirm it’s powered on by checking the indicator light (blue = on, red = off). A photo of the computer puck is shown below:
+
+<img
+  src="/img/library-kiosk-computer-puck.png"
+  title="library-kiosk-computer-puck"
+  width={400}
+/>
+
+3. Verify the input source.
+The computer connects to the monitor via HDMI. Use the buttons on the bottom of the monitor to open the settings menu and ensure HDMI is selected as the active input. It should look like the image below:
+
+<img
+  src="/img/library-kiosk-menu-hdmi.png"
+  title="library-kiosk-menu"
+  width={400}
+/>
+
+
 ### Additional Information
 
 - 1920x1080
