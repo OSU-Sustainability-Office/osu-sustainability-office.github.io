@@ -116,3 +116,12 @@ Use [this website](https://www.qrcode-monkey.com) for generating new QR codes (i
   - [Reference](https://www.kioware.com/docs.aspx?u=configattracttab.html&p=3&v=8.6&t=4#AttractScreens)
 - **Navigation**
   - KioWare includes built-in functionality for forward and backward navigation (swipe left/right on screen).  
+
+## Kiosk Remote Controls
+For the Library and LINC kiosks, remote controls are available to adjust monitor settings as needed. These remotes are located in the Western Building, stored in the office supplies cabinets. The location is shown in the picture below:
+
+<img
+  src="/img/kiosk-remote.png"
+  title="kiosk-remote"
+  width={400}
+/>
