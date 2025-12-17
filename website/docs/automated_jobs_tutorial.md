@@ -49,6 +49,10 @@ Follow these steps when updating an existing automated job.
 2. Click "View push commands"
 3. Follow the AWS-provided push commands to authenticate, build, tag, and push your Docker image to the selected repository.
 
+:::caution
+Apple Silicon Macs require the `--platform linux/amd64` flag.
+:::
+
 ## AWS ECS (Elastic Container Service)
 
 AWS ECS is the service that runs the AWS ECR images as containers. ECS task definitions point to image URIs in ECR, so when you push an updated image to ECR, ECS can automatically pull and run the latest version.
@@ -129,6 +133,11 @@ Follow these steps in order to test your webscraper changes.
 ### Step 3: Docker Testing
 
 1. Build the Docker image: `docker build . -t test`
+
+:::caution
+Apple Silicon Macs require the `--platform linux/amd64` flag.
+:::
+
 2. Run the Docker container: `docker run -t test`
 3. **Success criteria:** 
    - Container runs without errors
