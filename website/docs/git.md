@@ -95,7 +95,7 @@ Feel free to edit this doc / instructions as needed, this is a living document.
 
 ### Testing Checklist
 
-- NOTE: Webscrapers (`automated-jobs` repo) follow a different testing / deployment pipeline, see [here](updating_webscraper) and [here](webscraper_tutorial#testing-pipeline-guide) for more
+- NOTE: Webscrapers (`automated-jobs` repo) follow a different testing / deployment pipeline, see [here](updating_webscraper) and [here](automated_jobs_tutorial#testing-pipeline-guide) for more
 - Should test (ideally log screenshot evidence in PR comments):
   - Locally (e.g. on [http://localhost:8080](http://localhost:8080) or [http://localhost:3000](http://localhost:3000))
   - Test S3 preview deployment (if frontend only changes on [Energy Dashboard](http://energy-dashboard.s3-website-us-west-2.amazonaws.com/#/map) or [Carbon Calculator](http://carbon-calculator.s3-website-us-west-2.amazonaws.com/#/))

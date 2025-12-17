@@ -40,7 +40,7 @@ const sidebars = {
 
       items: [
         'database',
-        'webscraper_tutorial',
+        'automated_jobs_tutorial',
         `energy_dashboard_graphs`,
         `lambda_common_layer`,
         `carbon_calculator`,

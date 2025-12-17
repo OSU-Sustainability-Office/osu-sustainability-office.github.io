@@ -1,0 +1,178 @@
+---
+title: Automated Jobs Tutorial
+description: Guide on adding automated jobs
+---
+
+# Automated Jobs Tutorial
+
+## General Info
+
+[Link to GitHub Repository](https://github.com/OSU-Sustainability-Office/automated-jobs)
+
+## Automated-Jobs Dev Setup
+
+1. From the repository root, cd into the folder of the automated job you want to run (e.g., SEC, check-acq).
+2. Paste the env file into the corresponding automated job. 
+    - [Link to .env files](https://drive.google.com/drive/u/1/folders/1geuKCp-aTIrde2WdJkE3f_L2TsF46_O3) (Need to be a paid OSU Sustainability Office Employee to see this link)
+    - Env files that are used by automated jobs will have a file name like "automated-jobs-XXXX.env.txt" (e.g. automated-jobs-pacific.env.txt for the pacific power scraper). 
+    - Env files need `DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy` unless you are making changes to energy dashboard (more on this in Testing Pipeline section)
+3. Ensure you are using the correct node version. Node version could potentially vary between automated jobs so refer to the README.md in folder of the automated job.
+4. `npm i` to install packages.
+5. `node <Javascript file name>`, e.g. `node readsec.js` to run webscraper.
+
+## AWS ECR (Elastic Container Registry)
+
+[AWS ECR](https://us-west-2.console.aws.amazon.com/ecr/repositories?region=us-west-2) is the registry that stores and versions the Docker images for each automated job. Any update to a webscraper gets pushed to ECR as an image, and ECS automatically runs the newest image.
+
+![alt_text](../static/img/webscraper1.png 'image_tooltip')
+
+### Creating a new repository
+This is only necessary if a new automated job has been developed.
+1. Click "Create repository"
+2. In the "General settings" section, enter the repository name
+3. Leave everything else as-is and click "Create"
+4. Proceed to [Creating a new task definition](./automated_jobs_tutorial#creating-a-new-task-definition) section
+
+### Pushing an image to an existing repository
+Follow these steps when updating an existing automated job.
+
+**Prerequisites**
+- AWS CLI must be installed
+- Docker Desktop App must be running in background
+- For **Windows Users**:
+  - Windows PowerShell Admin
+      - If you are dealing with “execution of scripts is disabled on this system” issue, then [this stack overflow article](https://stackoverflow.com/questions/54776324/powershell-bug-execution-of-scripts-is-disabled-on-this-system) may be useful.
+  - Install the specific module for managing ECR through the AWS Tools for PowerShell using: `Install-AWSToolsModule AWS.Tools.ECR`
+
+**Steps**
+1. From the [AWS ECR Private repositories list](https://us-west-2.console.aws.amazon.com/ecr/repositories?region=us-west-2), navigate to the desired automated job.
+2. Click "View push commands"
+3. Follow the AWS-provided push commands to authenticate, build, tag, and push your Docker image to the selected repository.
+
+:::caution
+Apple Silicon Macs require the `--platform linux/amd64` flag.
+:::
+
+## AWS ECS (Elastic Container Service)
+
+AWS ECS is the service that runs the AWS ECR images as containers. ECS task definitions point to image URIs in ECR, so when you push an updated image to ECR, ECS can automatically pull and run the latest version.
+
+### Creating a new task definition
+1. From [AWS ECS task definition page](https://us-west-2.console.aws.amazon.com/ecs/v2/task-definitions?region=us-west-2), click on "Create new task definition" > "Create new task definition" (not with JSON)
+2. Check the box for "AWS Fargate" as the launch type
+3. Leave Operating system/Architecture as-is
+4. We can typically use cheapest option for cpu/memory (0.25 vCPU/0.5 GB)
+5. In the Container details section, enter an appropriate container name.
+6. For Image URI, click "Browse ECR Images" > *Your automated job ECR* > "Use image tag: latest"
+7. In the logging section, enter the following values for each key:
+    ```
+    - awslogs-group: /ecs/
+    - awslogs-region: us-west-2
+    - awslogs-stream-prefix: ecs
+    - awslogs-create-group: true
+    ```
+
+**Note:** If you are running into any issues, you can refer to an existing task definition's JSON configuration settings.
+
+### Creating a new cluster
+1. From [AWS ECS cluster page](https://us-west-2.console.aws.amazon.com/ecs/v2/clusters?region=us-west-2), click "Create cluster"
+2. Use default options and click "Create"
+3. Go to the newly created cluster and click "Scheduled tasks"
+4. Click update on an existing scheduled task for reference before making a new one (have them side by side on different tabs!)
+5. While testing something for the first time, it's a good idea to set the interval for running the CRON job as something like every minute or every 5 minutes. But once you are certain it works, make sure to turn the interval back to once every 24 hours or 48 hours etc.
+
+## AWS Cloudwatch
+
+[AWS Cloudwatch log groups](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups) can be used for debugging purposes and to verify that the automated job has executed.
+
+See [this page on Cloudwatch](./cloudwatch.md) as well for more information
+
+## Testing Pipeline Guide
+Follow these steps in order to test your webscraper changes.
+
+### Step 1: Local Development Setup
+
+**Prerequisites:**
+- Ensure Node.js, Docker Desktop, and MySQL Workbench are installed
+- Have access credentials for the SQL database and Energy Dashboard API
+- Have the `.env` file for your automated job (e.g., `automated-jobs/SEC/.env`) ([Link to .env files](https://drive.google.com/drive/u/1/folders/1geuKCp-aTIrde2WdJkE3f_L2TsF46_O3))
+
+**Setup:**
+1. Navigate to your automated job folder (e.g., `automated-jobs/SEC/`)
+2. Install dependencies: `npm install`
+3. Ensure you're using the correct Node version (check the README.md in the folder)
+
+### Step 2: Local Testing (Node.js)
+
+**For webscraper-only changes:**
+1. Edit the `DASHBOARD_API` value in your `.env` file to use the production URL:
+   ```
+   DASHBOARD_API = https://api.sustainability.oregonstate.edu/v2/energy
+   ```
+2. Run the webscraper: (e.g. `node readsec.js`)
+3. **Success criteria:** New data appears in the SQL database via MySQL Workbench
+
+**For changes involving energy dashboard backend:**
+1. Start the energy dashboard backend locally: `sam local start-api` (should run on http://localhost:3000)
+2. Edit the `DASHBOARD_API` value in your `.env` file to use the local URL:
+   ```
+   DASHBOARD_API = http://localhost:3000
+   ```
+3. Run the webscraper: (e.g. node readsec.js)
+4. **Success criteria:** 
+   - New data appears in the SQL database
+   - Local frontend shows the data (check via Inspect Element > Network tab)
+
+:::tip
+- `API_PWD` in your automated-jobs env file should match the `AQUISUITE_PWD` value that the energy-dashboard backend expects
+- Reference these files for backend integration details:
+  - [meter.js model](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/dependencies/nodejs/models/meter.js#L141)
+  - [meter.js app](https://github.com/OSU-Sustainability-Office/energy-dashboard/blob/master/backend/app/meter.js#L88)
+:::
+
+### Step 3: Docker Testing
+
+1. Build the Docker image: `docker build . -t test`
+
+:::caution
+Apple Silicon Macs require the `--platform linux/amd64` flag.
+:::
+
+2. Run the Docker container: `docker run -t test`
+3. **Success criteria:** 
+   - Container runs without errors
+   - New data appears in the SQL database
+
+### Step 4: AWS Deployment Testing
+
+**For webscraper updates only:**
+- You only need to push changes to ECR (not ECS)
+- ECS should automatically pick up the latest ECR revision
+
+**Deployment steps:**
+1. [Push your Docker image to ECR](./automated_jobs_tutorial#pushing-an-image-to-an-existing-repository)
+2. Temporarily change the ECS scheduled task interval to 1 minute for testing:
+   - Go to ECS > cluster > scheduled task > update
+   - Set interval to 1 minute
+3. Monitor the deployment via Cloudwatch logs
+4. **Important!!** Once you see the run in CloudWatch logs, revert the scheduled task to its original interval
+5. **Success criteria:**
+   - Check Cloudwatch logs for successful execution
+   - Verify data appears on production sites:
+     - [SEC Solar](https://dashboard.sustainability.oregonstate.edu/#/building/30/2)
+     - [OSU Operations](https://dashboard.sustainability.oregonstate.edu/#/building/42/2)
+   - Confirm data in SQL database via MySQL Workbench
+
+### Step 5: Cleanup and Final Verification
+
+1. **Verify ECS interval:** Confirm that the scheduled task has been reverted to its original interval
+2. **Remove duplicate data:** If testing created duplicate entries, clean them up:
+   ```sql
+   DELETE from Solar_Meters where id = <some id>
+   ```
+
+   :::info
+   Redundant data is [handled on the frontend](https://github.com/OSU-Sustainability-Office/energy-dashboard/pull/220/files#diff-6586f246008ae5ee333b803001847a4b4a69e2bbad28ff73b547375126b99a6bR80), but it's good practice to clean up
+   :::
+
+3. **Final verification:** Confirm everything works in production

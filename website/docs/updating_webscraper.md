@@ -1,6 +1,6 @@
 ---
 title: Updating Webscraper
-description: Webscraper Tutorial Info that Pertains to Updating Webscraper
+description: Automated Jobs Tutorial Info that Pertains to Updating Webscraper
 ---
 
 :::info
@@ -18,5 +18,5 @@ description: Webscraper Tutorial Info that Pertains to Updating Webscraper
 - Go to AWS Console > ECR > View Push Commands
 - Follow push commands in CLI
   - Note, as also explained in linked article below, that your operating system (Windows vs Linux etc.) can affect the AWS CLI login command syntax
-- [See here](webscraper_tutorial#testing-pipeline-guide) for more detailed info
+- [See here](automated_jobs_tutorial#testing-pipeline-guide) for more detailed info
 - In general, remember to check ECR and/or ECS in AWS Console (depending on which you tried to change), just to make sure the changes have gone through and all is working as expected. Check Cloudwatch logs as well
