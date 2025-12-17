@@ -1,9 +1,9 @@
 ---
-title: Webscraper Tutorial
+title: Automated Jobs Tutorial
 description: Guide on adding webscrapers to Energy Dashboard
 ---
 
-# Webscraper Tutorial
+# Automated Jobs Tutorial
 
 ## General Info
 
@@ -31,7 +31,7 @@ This is only necessary if a new automated job has been developed.
 1. Click "Create repository"
 2. In the "General settings" section, enter the repository name
 3. Leave everything else as-is and click "Create"
-4. Proceed to [Creating a new task definition](./webscraper_tutorial#creating-a-new-task-definition) section
+4. Proceed to [Creating a new task definition](./automated_jobs_tutorial#creating-a-new-task-definition) section
 
 ### Pushing an image to an existing repository
 Follow these steps when updating an existing automated job.
@@ -141,7 +141,7 @@ Follow these steps in order to test your webscraper changes.
 - ECS should automatically pick up the latest ECR revision
 
 **Deployment steps:**
-1. [Push your Docker image to ECR](./webscraper_tutorial#pushing-an-image-to-an-existing-repository)
+1. [Push your Docker image to ECR](./automated_jobs_tutorial#pushing-an-image-to-an-existing-repository)
 2. Temporarily change the ECS scheduled task interval to 1 minute for testing:
    - Go to ECS > cluster > scheduled task > update
    - Set interval to 1 minute

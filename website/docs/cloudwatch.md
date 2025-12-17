@@ -22,7 +22,7 @@ description: Overview of Cloudwatch and SNS Email Alerts
   - Follow existing alarms here as an example if in doubt
   - NOTE: When creating a new alarm, the metric filter will only be detected if the filter was applied to "new data" (so to speak) since the filter was created
     - The CRON jobs are set up in AWS ECS are set to 24 or 48 hour intervals by default, so you may want to temporarily set the Scheduled Task in ECS to be 5 minutes to speed up development
-    - See [this page for more info on ECS Scheduled Tasks](webscraper_tutorial#clusters)
+    - See [this page for more info on ECS Scheduled Tasks](automated_jobs_tutorial#clusters)
     - Remember to set the Scheduled Task back to original time interval once you've set the alarm up and verified it works
     - Note that the Scheduled Task's "cycle" is based on when you last updated it. If you last updated the Scheduled Task to run every 24 hours at 2 AM, it will run at 2 AM every day. So, it may better to set the alarm during the daytime so you don't get emailed at weird times
 - The amount of time it takes for an alarm to go from "In alarm" to "Insufficient data" is defined by what you have set the "period" of the alarm as. In general, it takes 3 periods for the alarm state to reset
