@@ -1,6 +1,6 @@
 ---
 title: Automated Jobs Tutorial
-description: Guide on adding webscrapers to Energy Dashboard
+description: Guide on adding automated jobs
 ---
 
 # Automated Jobs Tutorial
