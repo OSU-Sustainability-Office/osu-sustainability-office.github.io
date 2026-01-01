@@ -132,6 +132,17 @@ npm run serve
 - Backend is locally hosted at [http://localhost:3000](http://localhost:3000)
 - Frontend is locally hosted at [http://localhost:8080](http://localhost:8080)
 
+:::tip
+If data is not loading during local development, the backend may be blocking requests due to CORS.
+
+As a **temporary debugging step**, you can update the backend’s `AllowOrigin` setting to allow requests from `localhost`,
+as shown in the image below.
+
+**Important:** This change is for local testing only and must not be deployed to production, as it weakens security.
+
+![Screenshot](../static/img/backend_cors_fix.png)
+:::
+
 :::note
 Need both backend and frontend running for it to work.
 :::
