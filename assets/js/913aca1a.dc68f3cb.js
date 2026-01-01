@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[857],{372:function(e){e.exports=JSON.parse('{"title":"More Specific Documentation","slug":"specific","permalink":"/docs/specific","navigation":{"previous":{"title":"FAQ / HELP ME","permalink":"/docs/faq"},"next":{"title":"Database","permalink":"/docs/database"}}}')}}]);
