@@ -66,7 +66,7 @@ AWS ECS is the service that runs the AWS ECR images as containers. ECS task defi
 6. For Image URI, click "Browse ECR Images" > *Your automated job ECR* > "Use image tag: latest"
 7. In the logging section, enter the following values for each key:
     ```
-    - awslogs-group: /ecs/
+    - awslogs-group: /ecs/name_of_your_task_definition
     - awslogs-region: us-west-2
     - awslogs-stream-prefix: ecs
     - awslogs-create-group: true
