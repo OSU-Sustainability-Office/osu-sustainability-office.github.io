@@ -58,6 +58,7 @@ const sidebars = {
       items: [
         `git`,
         'cloudwatch',
+        `adding_acquisition_servers`,
         `adding_meters_buildings`,
         `kilowatt_crackdown`,
         'openssl',
