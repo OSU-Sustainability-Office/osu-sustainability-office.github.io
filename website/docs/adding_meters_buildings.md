@@ -12,6 +12,10 @@ description: Checklist of tasks needed for adding new meters / buildings
 
 :::
 
+:::note
+This page assumes the meters are already uploading data. If the meters come from a newly installed or replaced Acquisuite, start with [Adding Meters from New Acquisition Servers](adding_acquisition_servers) first.
+:::
+
 ## MySQL Workbench
 
 The following tables in the SQL database should be updated each time a new meter and/or building is added:
