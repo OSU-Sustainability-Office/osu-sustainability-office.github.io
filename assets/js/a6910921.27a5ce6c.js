@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[881],{4080:function(s){s.exports=JSON.parse('{"title":"Recurring Tasks","slug":"tasks","permalink":"/docs/tasks","navigation":{"previous":{"title":"Kiosks","permalink":"/docs/kiosks"},"next":{"title":"Git","permalink":"/docs/git"}}}')}}]);
